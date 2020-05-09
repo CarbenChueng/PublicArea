@@ -1,4 +1,0 @@
-print("ahahahah")
-print("ahahahah")
-print("jijijiji")
-print(2+3)
