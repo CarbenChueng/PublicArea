@@ -292,42 +292,90 @@ using namespace std;
 //}
 
 //=========================================多继承======================================
-class Base1
+//
+//class Base1
+//{
+//public:
+//    Base1()
+//    {
+//        a = 100;
+//    }
+//    int a;
+//};
+//
+//
+//class Base2
+//{
+//public:
+//    Base2()
+//    {
+//        a = 300;
+//    }
+//    int a;
+//};
+//class Son : public Base1,public Base2//多继承
+//{
+//public:
+//   Son()
+//    {
+//        c = 600;
+//    }
+//    int c;
+//};
+//void test()
+//{
+//    Son s;
+////    cout << "占用空间" << sizeof(s) <<endl;
+//    cout <<  "占用空间" <<s.c <<endl;
+//    cout << s.Base1::a <<endl;
+//    cout << s.Base2::a <<endl;
+//}
+//
+//int main()
+//{
+//    test();
+//    return 0;
+//}
+
+//=========================================菱形继承======================================
+
+class Animal
 {
 public:
-    Base1()
-    {
-        a = 100;
-    }
-    int a;
+    int m_age = 0;
+     
 };
 
+//羊
+class Sheep: public Animal
+{
+    
+};
 
-class Base2
+//骆驼
+class Tuo : public Animal
 {
-public:
-    Base2()
-    {
-        a = 300;
-    }
-    int a;
+    
 };
-class Son : public Base1,public Base2//多继承
+
+//羊驼类
+class Fuck : public Sheep,public Tuo
 {
-public:
-   Son()
-    {
-        c = 600;
-    }
-    int c;
+    
+    
 };
+
 void test()
 {
-    Son s;
-//    cout << "占用空间" << sizeof(s) <<endl;
-    cout <<  "占用空间" <<s.c <<endl;
-    cout << s.Base1::a <<endl;
-    cout << s.Base2::a <<endl;
+    Fuck sh;
+    sh.Sheep:: m_age = 100;
+    sh.Tuo:: m_age = 100;
+    //菱形继承也要加作用域，因为父类有相同的数据，
+    cout << sh.Sheep::m_age << endl;
+    cout << sh.Tuo::m_age << endl;
+    
+    //
+    
 }
 
 int main()
@@ -335,3 +383,8 @@ int main()
     test();
     return 0;
 }
+
+
+
+
+ 
