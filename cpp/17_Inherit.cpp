@@ -346,14 +346,16 @@ public:
      
 };
 
+//利用虚继承解决菱形继承的资源浪费问题 virtual
+
 //羊
-class Sheep: public Animal
+class Sheep: virtual public Animal
 {
     
 };
 
 //骆驼
-class Tuo : public Animal
+class Tuo : virtual public Animal
 {
     
 };
@@ -368,13 +370,13 @@ class Fuck : public Sheep,public Tuo
 void test()
 {
     Fuck sh;
-    sh.Sheep:: m_age = 100;
+    sh.Sheep:: m_age = 30;
     sh.Tuo:: m_age = 100;
     //菱形继承也要加作用域，因为父类有相同的数据，
-    cout << sh.Sheep::m_age << endl;
-    cout << sh.Tuo::m_age << endl;
-    
-    //
+//    cout << sh.Sheep::m_age << endl;
+//    cout << sh.Tuo::m_age << endl;
+    cout << sh.m_age << endl;
+    //菱形继承有有两份数据，资源浪费.原理是指针偏移到一起了，以最后一个为准
     
 }
 
