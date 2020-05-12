@@ -215,6 +215,13 @@ Created on Mon May  4 16:00:43 2020
 # Poke.SendPoke()
 # Poke.ShowPlayers()
 
+# ====================列表推导式=================
+list2  = [i**2 for i in range(10) if i %2 ==0]
+list3  = ["good" for i in range(10) if i %2 ==0]
+ditt = {i:i**2 for i in range(7)}
+cc = {"aa":"aa1","bb":"bb2","cc":"cc3"}
+dc = {cc[l]: l for  l in cc.keys()}
 
+print(list2,list3,ditt,dc,sep="\n")
 
 

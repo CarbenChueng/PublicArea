@@ -60,46 +60,47 @@
 #================================================================================================
 
 # 案例：
-db_infos = [
-            {"name":"张三丰","gender":1,"nick_name":"三爷","idcard":"11010116373808081017",
-             "blood":"b","native":"河北省江丹口"},
+# db_infos = [
+#             {"name":"张三丰","gender":1,"nick_name":"三爷","idcard":"11010116373808081017",
+#              "blood":"b","native":"河北省江丹口"},
+#
+#             {"name":"张打标","gender":1,"nick_name":"斌爷","idcard":"11010119773808081017",
+#              "blood":"b","native":"河北省江丹口"}
+#
+#             ]
+# #循环列表
+# for person in db_infos:
+#     #取出个人信息
+#     name = person["name"]
+#     nick_name = person["nick_name"]
+#     gender = person["gender"]
+#     blood = person["blood"]
+#     native = person["native"]
+#     idcard = person["idcard"]
+#     #判断是否满足条件
+#     #只要有一个人不满足，跳过检查下一个
+#     if not name.startswith("张") :
+#         continue
+#
+#     if name.find("斌") == -1 and nick_name.find("斌") == -1 :
+#         continue
+#
+#     if gender != 1 :
+#         continue
+#
+#     if blood.lower() != "b" :
+#         continue
+#
+#     if native.find("河北") == -1 :
+#         continue
+#
+#     if int(idcard[6:10]) < 1975 or int(idcard[6:10]) > 1978:
+#         continue
+#
+#     #设计字典做对应关系（映射）
+#     genders = {1:"男",2:"女"}
+#     print("姓名："+ name,"外号：" +nick_name,"性别："+genders[gender],"血型："+blood,"籍贯:"+native,"身份证："+idcard)
 
-            {"name":"张打标","gender":1,"nick_name":"斌爷","idcard":"11010119773808081017",
-             "blood":"b","native":"河北省江丹口"}
-
-            ]
-#循环列表
-for person in db_infos:
-    #取出个人信息
-    name = person["name"]
-    nick_name = person["nick_name"]
-    gender = person["gender"]
-    blood = person["blood"]
-    native = person["native"]
-    idcard = person["idcard"]
-    #判断是否满足条件
-    #只要有一个人不满足，跳过检查下一个
-    if not name.startswith("张") :
-        continue
-
-    if name.find("斌") == -1 and nick_name.find("斌") == -1 :
-        continue
-
-    if gender != 1 :
-        continue
-
-    if blood.lower() != "b" :
-        continue
-
-    if native.find("河北") == -1 :
-        continue
-
-    if int(idcard[6:10]) < 1975 or int(idcard[6:10]) > 1978:
-        continue
-
-    #设计字典做对应关系（映射）
-    genders = {1:"男",2:"女"}
-    print("姓名："+ name,"外号：" +nick_name,"性别："+genders[gender],"血型："+blood,"籍贯:"+native,"身份证："+idcard)
 
 
 

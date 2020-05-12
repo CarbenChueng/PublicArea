@@ -42,11 +42,33 @@ count(数据)                       获取数据的总数
 # print(dcc.keys())
 # dll = {dcc[wx]:wx for wx in dcc.keys()}
 # print(dll)
+
+#关键字参数必须在无定向实参后面
+
+sep="oo" sep是分隔符,暂时知道在print()里面用
+
+def test(**kwargs):
+    #效果：print("a"，"b"，"c"，"d")
+    print(*kwargs)   #*kwargs对传递过来的所有字典参数中的key进行现实操作
+    #一个星号代表拆包，拆开里面每个元素，字典只拆key
+test(a = 1,b =2,c = 3, d=4)
+
+ #一个星号代表拆包，拆开里面每个元素，字典只拆key
+list1 = [3,5,6]
+tuple1 = ("a","k","7")
+dict1 = {1:"ah",3:"asd",2 :"23"}      
+ste = "jkl"
+print(*ste,*tuple1,*dict1,*list1)
+
+#函数调用最多1000次 （其实是999，因为内置main函数）
+#匿名无参函数：后面一定要写（），，r = (lambda:100)()
+函数默认返回none,同一个函数中只能执行一次return，return后面的内容将不再执行
+匿名函数可以接收多个返回值（元组组包），使用对应数量的变量接收即可
+
+
 """
 
 
-
-        
 
 
   
