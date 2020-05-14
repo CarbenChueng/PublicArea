@@ -109,4 +109,14 @@
 # f4 = (lambda :[a**2 for a in range(6) if a %2 ==0])()
 # print(f4)
 
+for i in range(100,10000):
+    if (i/100)**3+(i/10%10)**3+(i%10)**3 == i:
+        print(i)
+
+for n in range(100,1000):
+    c = n/100
+    b = n/10%10
+    d = n%10
+    if c**3 + b**3 +d**3 == n:
+        print(n)
 
