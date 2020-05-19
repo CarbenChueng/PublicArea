@@ -43,7 +43,17 @@
 
 6，按Ctrl+Shift+E可获取最近查看或更改的代码片段的列表。
 
+7，The easiest way to run a utility of the manage.py task is to choose Run manage.py Task in the Tools menu, or press  .
+As you type the name of the utility you want to run, the lookup list shrinks to show the matching entries only.
 
+8，要在列模式Alt+Shift+Insert中选择多个片段，请按住Control+Alt+Shift（在Windows和Linux上）或Cmd+Alt+Shift（在Mac OS上），
+然后拖动鼠标：
+
+9，要快速完成位于项目、库或JDK中任意位置的静态方法的方法调用，请输入前缀，然后按Ctrl+空格两次。可以按Alt+Enter键导入选定的方法。
+
+10，您可以使用专用编辑器在代码中编辑语言注入。例如，要编辑正则表达式，请开始键入它，按Alt+Enter并选择edit RegExp Fragment。
+正则表达式在编辑器中的单独选项卡中打开，您可以在其中按原样键入反斜杠。所有更改都与原始正则表达式同步，并自动显示转义字符。
+准备好后，按Esc键关闭正则表达式编辑器。
 
 
 
