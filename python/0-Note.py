@@ -65,6 +65,7 @@ print(*ste,*tuple1,*dict1,*list1)
 函数默认返回none,同一个函数中只能执行一次return，return后面的内容将不再执行
 匿名函数可以接收多个返回值（元组组包），使用对应数量的变量接收即可
 
+random.random()是增加0-1之间的其中一个值
 
 """
 

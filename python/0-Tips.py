@@ -55,9 +55,11 @@ As you type the name of the utility you want to run, the lookup list shrinks to 
 正则表达式在编辑器中的单独选项卡中打开，您可以在其中按原样键入反斜杠。所有更改都与原始正则表达式同步，并自动显示转义字符。
 准备好后，按Esc键关闭正则表达式编辑器。
 
+11，按Ctrl+Shift+V从最近的剪贴板内容块中选择并插入。
 
+12，Ctrl+A全选
 
-
+13，Ctrl+Alt+L 字符自动间隔
 
 
 
