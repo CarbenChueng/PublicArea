@@ -21,44 +21,57 @@ from PIL import Image
 # plt.imshow(img)
 # plt.show()
 
-# ===============================torch框架=====================================
-xb = tc.arange(0, 1, 0.01)
-yb = 3 * xb + 2 + tc.rand(100)
+# ===============================线性代数=====================================
+#求行列式：
+# a = np.array([[1,2],[3,4]])
+# print(np.linalg.det(a))
+# #求行列式：
+# b = tc.tensor([[1.,2.],[3.,4.]])
+# print(b.det())
+#
+# #对角阵
+# c = np.diag([1,2,3,4,5])
+# print(c)
+# #对角阵
+# d = tc.diag(tc.tensor([1,2,3,4,5]))
+# print(d)
 
+#单位矩阵
+# e = np.eye(3)
+# e = np.eye(3,4)
+# print(e)
 
-class Nai(tc.nn.Module):
-    def __init__(self):
-        super().__init__()
-        self.w = tc.nn.Parameter(tc.rand(1))
-        self.b = tc.nn.Parameter(tc.rand(1))
+#单位矩阵
+# d = tc.eye(3)
+# d = tc.eye(3,4)
+# print(d)
 
-    def forward(self, xx):
-        return self.w * xx + self.b
+#下三角矩阵
+# e = np.tri(3,3)
+# print(e)
 
+# f = tc.tril(tc.ones(3,3))
+# print(f)
 
-if __name__ == '__main__':
-    n = Nai()
-    #定义优化器
-    opt = tc.optim.SGD(n.parameters(), lr=0.1, momentum=0.1)
+#1矩阵
+# f = np.ones((3,3))
+# print(f)
+#
+# g = tc.ones(3,3)
+# print(g)
 
-    ion = plt.ion()
-    for s in range(30):
-        for x, y in zip(xb, yb):
-            z = n(x)
-            looo = (z - y)**2
+#0矩阵
+# f = np.zeros((3,3))
+# print(f)
+#
+# g = tc.zeros(3,3)
+# print(g)
 
-            opt.zero_grad()
+#求内积
+# a = np.array([1,2])
+# b = np.array([3,4])
+# print(np.sum(a*b))
 
-            looo.backward()
-
-            opt.step()
-            print(n.w.item(),n.b.item(),looo.item())
-
-        plt.cla()
-        plt.plot(xb, yb, ".")
-        l = [n.w * i + n.b for i in xb]
-        plt.plot(xb, l)
-
-        plt.pause(0.1)
-    plt.ioff()
-    plt.show()
+# a = tc.tensor([[1.,2.],[3.,4.]])
+# print(tc.eig(a))#求特征值
+# print(tc.eig(a,eigenvectors=True))

@@ -61,6 +61,16 @@ As you type the name of the utility you want to run, the lookup list shrinks to 
 
 13，Ctrl+Alt+L 字符自动间隔
 
+14，如果需要更多的屏幕属性，可以通过单击左下角隐藏工具栏。如有必要，您可以显示工具窗口按钮片刻。
+为此，请按Alt（在Windows和Linux上）或Command（在macOS上）两次并保持按下状态。按键时，工具窗口按钮可见。
+
+15，您可以将编辑器中的文本复制为富文本，以将其粘贴到识别RTF的任何其他编辑器中。
+确保在“设置/首选项”对话框Ctrl+Alt+S的“编辑器常规”页上选中“默认情况下复制为富文本”复选框。
+
+16，通过按Ctrl+O（Code | override methods），可以轻松地重写基类的方法。
+要实现当前类实现的接口（或抽象基类）的方法，请按Ctrl+I（Code | implement methods）。
+
+
 
 
 
