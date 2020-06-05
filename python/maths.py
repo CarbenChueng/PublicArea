@@ -152,7 +152,7 @@ if __name__ == "__main__":
         plt.plot(xs,ys,"^")
         v = [line.w*r+line.b for r in xs]
         plt.plot(xs,v)
-
+        plt.title(loss)  # 显示损失
         plt.pause(0.01)
     plt.ioff()
     plt.show()
