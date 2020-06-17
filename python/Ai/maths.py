@@ -110,49 +110,49 @@ import matplotlib.pyplot as plt
 
 # ===============================torch框架=====================================
 
-xs = torch.arange(0, 1, 0.01)
-ys = 8 * xs + 2 + torch.rand(100)  # 取0-1
-
-
-# plt.plot(xs,ys,"^")
-# plt.show()
-class Line(torch.nn.Module):
-    def __init__(self):  # 初始化
-        super().__init__()
-        # 初始化模型
-        self.w = torch.nn.Parameter(torch.rand(1))  # 构建系统参数，自动优化,参数值是随机的
-        self.b = torch.nn.Parameter(torch.rand(1))  # 构建系统参数，自动优化,参数值是随机的
-
-    def forward(self, x):
-        return self.w * x + self.b
-
-
-if __name__ == "__main__":
-    line = Line()
-    # 定义优化器
-    opt = torch.optim.SGD(line.parameters(), lr=0.1,momentum = 0.1)
-    #他根据梯度对步长的自动更改
-    # opt = torch.optim.Adam(line.parameters(),lr=0.1)
-    
-    # 定义损失函数
-    # loss = torch.nn.MSELoss()
-    ion = plt.ion()
-    for epoch in range(30):
-        for x, y in zip(xs, ys):
-            z = line(x)
-            loss = (z-y)**2
-            #梯度清空
-            opt.zero_grad()
-            #自动求导
-            loss.backward()
-            #参数更新
-            opt.step()
-            print(line.w.item(),line.b.item(),loss.item())
-        plt.cla()
-        plt.plot(xs,ys,"^")
-        v = [line.w*r+line.b for r in xs]
-        plt.plot(xs,v)
-        plt.title(loss)  # 显示损失
-        plt.pause(0.01)
-    plt.ioff()
-    plt.show()
+# xs = torch.arange(0, 1, 0.01)
+# ys = 8 * xs + 2 + torch.rand(100)  # 取0-1
+#
+#
+# # plt.plot(xs,ys,"^")
+# # plt.show()
+# class Line(torch.nn.Module):
+#     def __init__(self):  # 初始化
+#         super().__init__()
+#         # 初始化模型
+#         self.w = torch.nn.Parameter(torch.rand(1))  # 构建系统参数，自动优化,参数值是随机的
+#         self.b = torch.nn.Parameter(torch.rand(1))  # 构建系统参数，自动优化,参数值是随机的
+#
+#     def forward(self, x):
+#         return self.w * x + self.b
+#
+#
+# if __name__ == "__main__":
+#     line = Line()
+#     # 定义优化器
+#     opt = torch.optim.SGD(line.parameters(), lr=0.1,momentum = 0.1)
+#     #他根据梯度对步长的自动更改
+#     # opt = torch.optim.Adam(line.parameters(),lr=0.1)
+#
+#     # 定义损失函数
+#     # loss = torch.nn.MSELoss()
+#     ion = plt.ion()
+#     for epoch in range(30):
+#         for x, y in zip(xs, ys):
+#             z = line(x)
+#             loss = (z-y)**2
+#             #梯度清空
+#             opt.zero_grad()
+#             #自动求导
+#             loss.backward()
+#             #参数更新
+#             opt.step()
+#             print(line.w.item(),line.b.item(),loss.item())
+#         plt.cla()
+#         plt.plot(xs,ys,"^")
+#         v = [line.w*r+line.b for r in xs]
+#         plt.plot(xs,v)
+#         plt.title(loss)  # 显示损失
+#         plt.pause(0.01)
+#     plt.ioff()
+#     plt.show()
