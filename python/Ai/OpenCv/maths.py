@@ -24,10 +24,11 @@ import matplotlib.pyplot as plt
 # print(x.shape)
 # y = 2**x
 # y1 = np.tile(np.array([3]),x.shape)
-#
-# # print(x)
+# print(y1)
+
+# print(x)
 # plt.plot(x,y)
-# # plt.plot(x,y1)
+# plt.plot(x,y1)
 # print(plt.show())
 
 
@@ -62,11 +63,11 @@ import matplotlib.pyplot as plt
 # print(plt.show())
 
 # ===============================求导=====================================
-# x = torch.tensor([3.0],requires_grad=True)
-# y = x**3+2
+x = torch.tensor([3.0],requires_grad=True)
+y = x**3+2
 # 第一种
-# y.backward()
-# print(x.grad)
+y.backward()
+print(x.grad)
 
 # 第二种（少用）
 # print(torch.autograd.grad(y,x))
