@@ -13,7 +13,7 @@ from sklearn.model_selection import cross_val_score
 
 
 #========================================汽车============================================
-dat = np.loadtxt("car.data",dtype=str,delimiter=',')
+dat = np.loadtxt("car.tag",dtype=str,delimiter=',')
 # print(dat)
 
 CarData = np.array(dat)
@@ -43,7 +43,7 @@ model.fit(x_train,y_train)
 
 
 #========================================房价============================================
-# dat = np.loadtxt("housing.data",dtype=np.float)
+# dat = np.loadtxt("housing.tag",dtype=np.float)
 # # print(dat.shape)
 # housesData = np.array(dat)
 # # print(housesData)
@@ -70,7 +70,7 @@ model.fit(x_train,y_train)
 #========================================红酒============================================
 
 
-# dat = np.loadtxt("wine.data",dtype=np.float,delimiter=',')
+# dat = np.loadtxt("wine.tag",dtype=np.float,delimiter=',')
 #
 # # wineData = np.array(dat)
 # y = dat[:,0]
@@ -98,13 +98,13 @@ model.fit(x_train,y_train)
 #========================================3D分类============================================
 
 #生成数据
-# data = np.random.rand(100,3)
+# tag = np.random.rand(100,3)
 #
 # #构建模型
 # model = KMeans(n_clusters=3)#分类的个数
 #
 # #训练
-# train = model.fit_predict(data)
+# train = model.fit_predict(tag)
 # print(train)
 #
 # #获取聚类中心
@@ -120,7 +120,7 @@ model.fit(x_train,y_train)
 #创建画板
 # fit = plt.figure()
 # ax = Axes3D(fit)
-# ax.scatter(data[:,0],data[:,1],data[:,2],c=train,marker="^",s=80)
+# ax.scatter(tag[:,0],tag[:,1],tag[:,2],c=train,marker="^",s=80)
 # ax.scatter(center[:,0],center[:,1],center[:,2],c=center[0],marker="*",s=30)
 # plt.show()
 
@@ -132,8 +132,8 @@ model.fit(x_train,y_train)
 # one_hots = np.eye(numClasses)[arr]
 # # print(one_hot)
 # # print(np.argmax(one_hots))#取最大索引值
-# data = [np.argmax(one_hot) for one_hot in one_hots]
-# print(data)
+# tag = [np.argmax(one_hot) for one_hot in one_hots]
+# print(tag)
 
 
 #========================================one hot============================================

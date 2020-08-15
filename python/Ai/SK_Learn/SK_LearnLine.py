@@ -15,7 +15,7 @@ import matplotlib.pyplot as plt
 # =======================简单调参==========================
 # 引入数据
 # iris = datasets.load_iris()
-# x = iris.data
+# x = iris.tag
 # y = iris.target
 # # 设置k值 1-30，通过绘图查看训练分数
 # k_range = range(1, 31)
@@ -35,7 +35,7 @@ import matplotlib.pyplot as plt
 # iris = datasets.load_iris()#有标签数据
 #
 # #划分训练集与测试集
-# x,y = iris.data,iris.target
+# x,y = iris.tag,iris.target
 # x_train,x_test,y_train,y_test = train_test_split(x,y,test_size=0.3)
 # #
 # # #数据预处理（不是必须的，但是处理更快）

@@ -6,8 +6,8 @@
 # one_hots = np.eye(num_classes)[arr]
 # print(one_hots)
 #
-# data = [np.argmax(one_hot) for one_hot in one_hots]
-# print(data)
+# tag = [np.argmax(one_hot) for one_hot in one_hots]
+# print(tag)
 
 import torch
 

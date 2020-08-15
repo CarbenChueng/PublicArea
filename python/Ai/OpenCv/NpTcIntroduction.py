@@ -16,8 +16,8 @@ import torch as tc
 # print(a.shape)  # 查看类型形状
 
 # print("生成数组")
-# data = [[[1,2,5],[3,4,2]],[[5,6,1],[1,7,8]]]
-# a = np.array(data)
+# tag = [[[1,2,5],[3,4,2]],[[5,6,1],[1,7,8]]]
+# a = np.array(tag)
 # print(type(a),a.shape,a.dtype,sep="\n")
 # print(a.ndim)#查看维度
 

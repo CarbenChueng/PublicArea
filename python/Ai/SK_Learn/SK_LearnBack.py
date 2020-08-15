@@ -47,7 +47,7 @@ from sklearn.metrics import mean_absolute_error,mean_squared_error,r2_score,expl
 # np.random.RandomState(0)
 #
 # iris = datasets.load_iris()
-# x,y = iris.data,iris.target
+# x,y = iris.tag,iris.target
 #
 # x_train,x_test,y_train,y_test = train_test_split(x,y,test_size=0.3)
 # scaler = preprocessing.StandardScaler().fit(x_train)
