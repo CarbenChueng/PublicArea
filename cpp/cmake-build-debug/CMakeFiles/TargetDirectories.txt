@@ -1,0 +1,3 @@
+/Users/kabun/Desktop/1-project/cpp/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/kabun/Desktop/1-project/cpp/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/kabun/Desktop/1-project/cpp/cmake-build-debug/CMakeFiles/CppProject.dir
