@@ -1,0 +1,6 @@
+/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Release -G "CodeBlocks - Unix Makefiles" /Users/kabunchueng/Desktop/1-Git/Code
+CMake Error at CMakeLists.txt:1 (cmake_minimum_required):
+  CMake 3.22 or higher is required.  You are running version 3.19.2
+
+
+-- Configuring incomplete, errors occurred!

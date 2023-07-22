@@ -7,6 +7,7 @@ from mpl_toolkits.mplot3d import Axes3D  # 导入3d坐标系
 
 
 # ff=gg=hh=3
+# print(ff,gg,hh)
 
 # img = Image.open("/Users/kabunchueng/Desktop/2-Cpp/11.jpg")
 # img.show() #操作系统查看图片
