@@ -1,3 +1,0 @@
-D:/CppWrite/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-D:/CppWrite/cmake-build-debug/CMakeFiles/CppWrite.dir
-D:/CppWrite/cmake-build-debug/CMakeFiles/edit_cache.dir
