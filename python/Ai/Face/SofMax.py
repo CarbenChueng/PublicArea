@@ -24,7 +24,7 @@ class Net(nn.Module):
 
         )
 
-        self.fc2 = nn.Sequential(
+        self.fc2 = nn.Sequential(adadad
             nn.Linear(2,10)
         )
 
