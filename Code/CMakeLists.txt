@@ -1,6 +1,12 @@
-cmake_minimum_required(VERSION 3.22)
-project(2_Cpp)
+cmake_minimum_required(VERSION 3.19)
+project(Code)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(2_Cpp main.cpp)
+include_directories(.)
+include_directories(_C++Learn)
+include_directories(_C++Project)
+
+add_executable(Code
+        _C++Learn/00_test.cpp
+        _C++Project/P01_AddressBookSystem.cpp)
