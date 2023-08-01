@@ -169,33 +169,6 @@ _C++Learn/00_test.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Code.dir/build.make CMakeFiles/Code.dir/_C++Learn/00_test.cpp.s
 .PHONY : _C++Learn/00_test.cpp.s
 
-_C++Project/P01_AddressBookSystem.o: _C++Project/P01_AddressBookSystem.cpp.o
-
-.PHONY : _C++Project/P01_AddressBookSystem.o
-
-# target to build an object file
-_C++Project/P01_AddressBookSystem.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Code.dir/build.make CMakeFiles/Code.dir/_C++Project/P01_AddressBookSystem.cpp.o
-.PHONY : _C++Project/P01_AddressBookSystem.cpp.o
-
-_C++Project/P01_AddressBookSystem.i: _C++Project/P01_AddressBookSystem.cpp.i
-
-.PHONY : _C++Project/P01_AddressBookSystem.i
-
-# target to preprocess a source file
-_C++Project/P01_AddressBookSystem.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Code.dir/build.make CMakeFiles/Code.dir/_C++Project/P01_AddressBookSystem.cpp.i
-.PHONY : _C++Project/P01_AddressBookSystem.cpp.i
-
-_C++Project/P01_AddressBookSystem.s: _C++Project/P01_AddressBookSystem.cpp.s
-
-.PHONY : _C++Project/P01_AddressBookSystem.s
-
-# target to generate assembly for a file
-_C++Project/P01_AddressBookSystem.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Code.dir/build.make CMakeFiles/Code.dir/_C++Project/P01_AddressBookSystem.cpp.s
-.PHONY : _C++Project/P01_AddressBookSystem.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -208,9 +181,6 @@ help:
 	@echo "... _C++Learn/00_test.o"
 	@echo "... _C++Learn/00_test.i"
 	@echo "... _C++Learn/00_test.s"
-	@echo "... _C++Project/P01_AddressBookSystem.o"
-	@echo "... _C++Project/P01_AddressBookSystem.i"
-	@echo "... _C++Project/P01_AddressBookSystem.s"
 .PHONY : help
 
 

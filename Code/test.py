@@ -1,6 +1,6 @@
 import torch
 import torch.backends.mps as mps
-from _PythonProject.DigitalRecognition.net import Net
+from _PythonProject._01_DigitalRecognition.write_net import Net
 
 # a = torch.tensor([[0., 0., 0., 0., 1., 0., 0., 0., 0., 0.],
 #             [1., 0., 0., 0., 0., 0., 0., 0., 0., 0.]])
@@ -11,7 +11,7 @@ from _PythonProject.DigitalRecognition.net import Net
 # print(torch.argmax(a,dim=1))
 # print(mps.is_available())
 model = Net()
-model.load_state_dict(torch.load("/Users/carbenchueng/Desktop/1-Git/Code/_PythonProject/DigitalRecognition/prarm/0.pt"))
+model.load_state_dict(torch.load("/Users/carbenchueng/Desktop/1-Git/Code/_PythonProject/_01_DigitalRecognition/prarm/0.pt"))
 
 input_tc = torch.randn((1,784))
 traced_script_model = torch.jit.trace(model,input_tc)

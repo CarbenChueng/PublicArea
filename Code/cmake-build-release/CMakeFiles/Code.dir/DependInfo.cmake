@@ -5,7 +5,6 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/carbenchueng/Desktop/1-Git/Code/_C++Learn/00_test.cpp" "/Users/carbenchueng/Desktop/1-Git/Code/cmake-build-release/CMakeFiles/Code.dir/_C++Learn/00_test.cpp.o"
-  "/Users/carbenchueng/Desktop/1-Git/Code/_C++Project/P01_AddressBookSystem.cpp" "/Users/carbenchueng/Desktop/1-Git/Code/cmake-build-release/CMakeFiles/Code.dir/_C++Project/P01_AddressBookSystem.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
 
