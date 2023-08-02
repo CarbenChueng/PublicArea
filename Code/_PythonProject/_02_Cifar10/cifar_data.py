@@ -18,12 +18,13 @@ train_data_loader = DataLoader(train_data_set,batch_size=1000,shuffle=True)
 test_data_loader = DataLoader(test_data_set,batch_size=1000,shuffle=True)
 
 # print(train_data.classes)
-# print(type(train_data.data[0]))
+# print(type(train_data_set.data[0]))
 # print(type(train_data.targets))
 
-# img_data = numpy.array(train_data.data[0])
-# img_data = torch.tensor((train_data.data[0]),dtype=torch.float32)
-# print(img_data.shape)
+# img_data1 = numpy.array(train_data_set.data[0])
+# img_data2 = torch.Tensor(train_data_set.data[0])
+# print(type(img_data1.shape),type(img_data2.shape))
+# print(img_data1.shape,img_data2.shape)
 # print(32*32*3)
 # uncode = transforms.ToPILImage()
 # img = uncode(img_data)
@@ -37,10 +38,10 @@ if __name__ == '__main__':
     loss_func = MSELoss()
     for epoch in tqdm(range(10000)):
         acc_sum = 0
-        for i,(img,tag) in enumerate(train_data_loader):
+        for i,(img,label) in enumerate(train_data_loader):
             #img(n,1,32,32)=====>(n,32*32*3)
             img = img.reshape(-1,32*32*3)
-            label = one_hot(tag,10).float()
+            label = one_hot(label,10).float()
             # img,label = img.to(DEVICE),label.to(DEVICE)
             # print(img.shape,label,sep="\n")
 
@@ -54,11 +55,11 @@ if __name__ == '__main__':
                 print("==========>train_loss",train_loss.item())
             sum_write.add_scalar("train_loss",train_loss.item(),epoch)
 
-        for i,(img,tag) in enumerate(test_data_loader):
+        for i,(img,label) in enumerate(test_data_loader):
             net.eval()
             #img(n,1,32,32)=====>(n,32*32*3)
             img = img.reshape(-1,32*32*3)
-            label = one_hot(tag,10).float()
+            label = one_hot(label,10).float()
             # img,label = img.to(DEVICE),label.to(DEVICE)
             # print(img.shape,label.shape,sep="\n")
 

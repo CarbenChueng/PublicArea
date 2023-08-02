@@ -28,15 +28,15 @@ test_loader = DataLoader(test_data_sat,batch_size=100,shuffle=True)
 if __name__ == '__main__':
     sum_write = SummaryWriter("logs")
     net = Net()
-    # net.load_state_dict(torch.load("./prarm/35.pt"))
+    net.load_state_dict(torch.load("./prarm/2.t"))
     opt = torch.optim.Adam(net.parameters())
     loss_func = MSELoss()
     for epoch in tqdm(range(10000)):
         acc_sum = 0
-        for i,(img,tag) in enumerate(train_loader):
+        for i,(img,label) in enumerate(train_loader):
             #img(n,1,28,28)=====>(n,784)
-            img = img.reshape(-1,784)
-            label = one_hot(tag,10).float()
+            # img = img.reshape(-1,784)
+            label = one_hot(label,10).float()
             # print(img.shape,label,sep="\n")
 
             out = net(img)
@@ -49,11 +49,11 @@ if __name__ == '__main__':
                 print("==========>train_loss",train_loss.item())
             # sum_write.add_scalar("train_loss",train_loss.item(),epoch)
 
-        for i,(img,tag) in enumerate(test_loader):
+        for i,(img,label) in enumerate(test_loader):
             net.eval()
             #img(n,1,28,28)=====>(n,784)
-            img = img.reshape(-1,784)
-            label = one_hot(tag,10).float()
+            # img = img.reshape(-1,784)
+            label = one_hot(label,10).float()
             # print(img.shape,label.shape,sep="\n")
 
             out = net(img)
@@ -61,11 +61,12 @@ if __name__ == '__main__':
             out = torch.argmax(out,dim=1)
             label = torch.argmax(label,dim=1)
             acc = torch.mean(torch.eq(out,label).float())
-            acc_sum+=acc
+            # acc_sum+=acc
 
             if i%100 == 0:
-                print("==========>test_loss",test_loss.item())
+                # print("==========>test_loss",test_loss.item())
+                print("==========>acc       ",acc)
             # sum_write.add_scalar("test_loss",test_loss.item(),epoch)
-        print("==========>acc",acc_sum/i)
-        sum_write.add_scalars("loss",{"train_loss":train_loss,"test_loss":test_loss},epoch)
-        # torch.save(net.state_dict(),f"./prarm/{epoch}.pt")
+        # print("==========>acc",acc_sum/i)
+        # sum_write.add_scalars("loss",{"train_loss":train_loss,"test_loss":test_loss},epoch)
+        # torch.save(net.state_dict(),f"./prarm/{epoch}.t")
