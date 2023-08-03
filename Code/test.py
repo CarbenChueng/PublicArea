@@ -1,9 +1,12 @@
+import cv2
+from PIL import Image
 import torch,numpy
 from torch.nn import *
+from thop import profile,clever_format
 from torchvision import datasets,transforms
 from torch.utils.data import DataLoader
 import torch.backends.mps as mps
-from _PythonProject._01_DigitalRecognition.write_net import Net
+# from _PythonProject._01_DigitalRecognition.write_net import Net
 
 # a = torch.tensor([[0., 0., 0., 0., 1., 0., 0., 0., 0., 0.],
 #             [1., 0., 0., 0., 0., 0., 0., 0., 0., 0.]])
@@ -42,5 +45,39 @@ from _PythonProject._01_DigitalRecognition.write_net import Net
 # uncode = transforms.ToPILImage()
 # img = uncode(img_data2)
 # img.show()
+
+
+# class Net(Module):
+#     def __init__(self):
+#         super(Net, self).__init__()
+#         self.layers = Sequential(
+#             Conv2d(3,16,3,1),
+#             LeakyReLU()
+#         )
+#
+#     def forward(self,x):
+#         return self.layers(x)
+#
+# net = Net()
+# x = torch.randn(1,3,16,16)
+# adap_max = AdaptiveMaxPool2d((1,3))
+# y = adap_max(x)
+# print(y.shape)
+# flops,paraam = profile(net,(x,))
+# flops, paraam = clever_format([flops, paraam], "%.3f")
+# print(flops)
+# print(paraam)
+
+
+img1 = cv2.imread("/Users/carbenchueng/Desktop/1-Git/Code/_Image/1.jpg")
+img2 = Image.open("/Users/carbenchueng/Desktop/1-Git/Code/_Image/1.jpg")
+img1 = torch.tensor(img1)
+# print(img1.shape)
+img1 = img1.permute(2,0,1)
+print(img1.shape)
+
+
+
+
 
 

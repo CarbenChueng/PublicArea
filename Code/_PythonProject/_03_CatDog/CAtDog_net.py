@@ -1,4 +1,5 @@
 from torch.nn import *
+from thop import profile,clever_format
 import torch
 
 class Net(Module):
@@ -6,32 +7,39 @@ class Net(Module):
     def __init__(self):
         super(Net, self).__init__()
         self.layers = Sequential(
-            Conv2d(3,16,3),
+            Conv2d(3,12,3),
             MaxPool2d(2),
-            PReLU(),
-            Conv2d(16,32,3),
+            LeakyReLU(),
+            Conv2d(12,24,3),
             MaxPool2d(2),
-            PReLU(),
-            Conv2d(32,64,3),
-            PReLU(),
-            Conv2d(64,128,3),
-            PReLU(),
+            LeakyReLU(),
+            Conv2d(24,32,3),
+            MaxPool2d(2),
+            LeakyReLU(),
+            Conv2d(32,54,3),
+            LeakyReLU(),
+            Conv2d(54,62,3),
+            LeakyReLU(),
+
         )
 
         self.out_layer = Sequential(
-            Linear(128*19*19,2),
-            Softmax(dim = 1)
+            Linear(62*6*6,2)
+            # Softmax(dim = 1)
         )
 
     #网络前向计算
     def forward(self,x):
         x = self.layers(x)
-        x = x.reshape(-1,128*19*19)
+        x = x.reshape(-1,62*6*6)
         return self.out_layer(x)
-        # return self.layers(x)
+        # return x
 
 if __name__ == '__main__':
     net = Net()
-    x = torch.randn((1,3,100,100))
+    x = torch.randn(6,3,100,100)
     out = net(x)
     print(out.shape)
+    # flops,paraam = profile(net,(x,))
+    # flops, paraam = clever_format([flops, paraam], "%.3f")
+    # print(flops,paraam,sep="\n")
