@@ -40,7 +40,7 @@ if __name__ == '__main__':
                 if i%100 == 0:
                     print(loss.item())
                 torch.save(net.state_dict(),f"./model/{epoch}.t")
-                epoch+=1
+                epoch += 1
                 # exit()
         #
         #
