@@ -2,10 +2,10 @@ import torch
 from torch.nn import *
 
 
-class Net(Module):
+class DigitalNet(Module):
 
     def __init__(self):
-        super(Net, self).__init__()
+        super(DigitalNet, self).__init__()
         self.layers = Sequential(
             Conv2d(1,16,3),
             MaxPool2d(2),
@@ -28,7 +28,7 @@ class Net(Module):
         return self.out_layer(x)
 
 if __name__ == '__main__':
-    net = Net()
+    net = DigitalNet()
     x = torch.randn((1,1,28,28))
     y = net(x)
-    print(y.shape)
+    print(type(y.shape[1]))

@@ -1,10 +1,11 @@
-import cv2
+import os,torch,numpy,cv2,turtle
+from matplotlib import pyplot as plt
+from tqdm import tqdm
 from PIL import Image
-import torch,numpy
 from torch.nn import *
 from thop import profile,clever_format
 from torchvision import datasets,transforms
-from torch.utils.data import DataLoader
+from torch.utils.data import DataLoader,Dataset
 import torch.backends.mps as mps
 # from _PythonProject._01_DigitalRecognition.write_net import Net
 
@@ -69,12 +70,42 @@ import torch.backends.mps as mps
 # print(paraam)
 
 
-img1 = cv2.imread("/Users/carbenchueng/Desktop/1-Git/Code/_Image/1.jpg")
-img2 = Image.open("/Users/carbenchueng/Desktop/1-Git/Code/_Image/1.jpg")
-img1 = torch.tensor(img1)
-# print(img1.shape)
-img1 = img1.permute(2,0,1)
-print(img1.shape)
+# img1 = cv2.imread("/Users/carbenchueng/Desktop/1-Git/Code/_Image/1.jpg")
+# img2 = Image.open("/Users/carbenchueng/Desktop/1-Git/Code/_Image/1.jpg")
+# img1 = torch.tensor(img1)
+# # print(img1.shape)
+# img1 = img1.permute(2,0,1)
+# print(img1.dtype,type(img2))
+
+
+# inn = torch.randn(1,1,5,5)
+# conv = Conv2d(1,1,3,1,dilation=1)
+# out = conv(inn)
+# print(out)
+
+
+# name = os.listdir(os.chdir("./_PythonProject/_04_YellowPerson/风景"))
+# # # print(os.getcwd())
+# #
+# i = 0
+# for old_name in tqdm(name):
+#     # print(old_name)
+#     os.rename(name[i],f"{str(i)}.jpg")
+#     i+=1
+
+#画图
+# turtle.color("blue")
+# turtle.forward(100)
+# turtle.left(90)
+# turtle.forward(100)
+# turtle.left(90)
+# turtle.forward(100)
+# turtle.left(90)
+# turtle.forward(100)
+
+img = cv2.imread("/Users/carbenchueng/Desktop/1-Git/Code/_Image/1.jpg")
+# img.show()
+print(img)
 
 
 

@@ -13,25 +13,25 @@ class Net(Module):
             Conv2d(12,24,3),
             MaxPool2d(2),
             LeakyReLU(),
-            Conv2d(24,32,3),
+            Conv2d(24,48,3),
             MaxPool2d(2),
             LeakyReLU(),
-            Conv2d(32,54,3),
+            Conv2d(48,96,3),
             LeakyReLU(),
-            Conv2d(54,62,3),
+            Conv2d(96,192,3),
             LeakyReLU(),
 
         )
 
         self.out_layer = Sequential(
-            Linear(62*6*6,2)
+            Linear(192*6*6,2),
             # Softmax(dim = 1)
         )
 
     #网络前向计算
     def forward(self,x):
         x = self.layers(x)
-        x = x.reshape(-1,62*6*6)
+        x = x.reshape(-1,192*6*6)
         return self.out_layer(x)
         # return x
 

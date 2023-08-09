@@ -6,14 +6,41 @@ from torchvision import models, transforms
 from mpl_toolkits.mplot3d import Axes3D
 from tqdm import tqdm
 
+
+# torch.set_default_tensor_type(torch.DoubleTensor)
+# e = [[1,2],[3,4]]
+# a = torch.tensor((2,2,2),dtype=torch.float32,requires_grad=True)
+# b = torch.rand(3,2)
+# print(a.dtype,b.dtype,type(e))
+# print(torch.tensor(e),b,b.mean(),sep="\n")
+# a = torch.arange(6.0).reshape(2,3)
+# b = torch.linspace(0,10,6).reshape(2,3)
+# f = torch.stack((a,b),dim=1)
+# print(torch.gt(a,b))
+# print(torch.lt(a,b))
+# print(torch.pow(a,2)) #幂运算
+# print(torch.log(a)) #指数运算
+# print(a.T)
+# print(a,b,f,sep="\n")
+
+
+
 # torch   numpy互相转换
 # a = torch.tensor([1,2,3])
 # b = numpy.array([1,2,3])
 # c = a.numpy()
 # e = torch.from_numpy(b)
-# print(type(c),type(a),type(e))
+# print(type(a),type(b),type(c),type(e))
+# print(a.dtype,b.dtype,c.dtype,e.dtype)
+# b.astype(numpy.float32())
+# numpy.save("asd",b)#二进制形式保存
+# numpy.load("asd.npy")#读取
 # print(b)
-
+# b = numpy.array([[[1,2,3],[4,5,6]],[[7,8,9],[10,11,12]],[[7,8,9],[10,11,12]]])
+# print(b.shape)
+# b = b.reshape((2,9,1,1))
+# print(b)
+# print(b.ndim)
 
 # 广播:
 # a1 = np.arange(24).reshape((4,6))
@@ -352,17 +379,17 @@ from tqdm import tqdm
 # img3.show()
 # img4.show()
 
-imgos = os.listdir("/Users/kabunchueng/Desktop/3-data/yellow_pic")
-print(imgos)
-plt.ion()
-for i in imgos:
-    img_path = os.path.join("/Users/kabunchueng/Desktop/3-data/yellow_pic",i)
-    img = Image.open(img_path)
-    plt.clf()
-    plt.imshow(img)
-    plt.axis(False)
-    plt.pause(1)
-plt.ioff()
+# imgos = os.listdir("/Users/kabunchueng/Desktop/3-data/yellow_pic")
+# print(imgos)
+# plt.ion()
+# for i in imgos:
+#     img_path = os.path.join("/Users/kabunchueng/Desktop/3-data/yellow_pic",i)
+#     img = Image.open(img_path)
+#     plt.clf()
+#     plt.imshow(img)
+#     plt.axis(False)
+#     plt.pause(1)
+# plt.ioff()
 
 
 #

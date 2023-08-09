@@ -5,11 +5,11 @@ import os,numpy,cv2,torch
 
 class CatDogData(Dataset):
 
-    def __init__(self,root,is_train = True):
+    def __init__(self,path,is_train = True):
         self.data_set = []
         sub_dir = "train" if is_train else "test"
         # print(sub_dir)
-        img_dir = f"{root}/{sub_dir}"
+        img_dir = f"{path}/{sub_dir}"
         for tag in os.listdir(img_dir):
             img_path = os.path.join(img_dir,tag)
             self.data_set.append((img_path))
@@ -33,7 +33,7 @@ class CatDogData(Dataset):
         # print(img_path)
         # print((img_path.split(".")[0][-1]))
         label = int(img_path.split(".")[0][-1])
-        label = torch.Tensor([label])
+        # label = torch.Tensor([label])
         # print(label)
         # label = torch.squeeze(one_hot(label,2))
         # print(type(img_data),type(label))
@@ -42,7 +42,8 @@ class CatDogData(Dataset):
 
 if __name__ == '__main__':
     cd = CatDogData("/Users/carbenchueng/Desktop/2-Data/Cat_Dog_Img",True)
-    print(cd[50])
+    print(cd[50][0].shape)
+    print(cd[50][1])
 
 
     # dataload = DataLoader(cd,batch_size=3,shuffle=False)
