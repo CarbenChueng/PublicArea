@@ -1,12 +1,14 @@
-import os,torch,numpy,cv2,turtle
+import json
+import os, torch, numpy, cv2, turtle
 from matplotlib import pyplot as plt
 from tqdm import tqdm
 from PIL import Image
 from torch.nn import *
-from thop import profile,clever_format
-from torchvision import datasets,transforms
-from torch.utils.data import DataLoader,Dataset
-import torch.backends.mps as mps
+from thop import profile, clever_format
+from torchvision import datasets, transforms
+from torch.utils.data import DataLoader, Dataset
+# import torch.backends.mps as mps,json
+
 # from _PythonProject._01_DigitalRecognition.write_net import Net
 
 # a = torch.tensor([[0., 0., 0., 0., 1., 0., 0., 0., 0., 0.],
@@ -93,7 +95,7 @@ import torch.backends.mps as mps
 #     os.rename(name[i],f"{str(i)}.jpg")
 #     i+=1
 
-#画图
+# 画图
 # turtle.color("blue")
 # turtle.forward(100)
 # turtle.left(90)
@@ -103,9 +105,21 @@ import torch.backends.mps as mps
 # turtle.left(90)
 # turtle.forward(100)
 
-img = cv2.imread("/Users/carbenchueng/Desktop/1-Git/Code/_Image/1.jpg")
-# img.show()
-print(img)
+# with open("/Users/carbenchueng/Desktop/1-Git/Code/_Image/1.jpg","rb") as file:
+#     lines = file.readlines()
+#     with open("/Users/carbenchueng/Desktop/1-Git/Code/_Image/1_bak.jpg","wb") as file_bak:
+#         file_bak.writelines(lines)
+
+
+d1 = {"name":"carben","age":18}
+json_str = json.dumps(d1)#转成json
+print(type(json_str),json_str)
+python_str = json.loads(json_str)#转成python
+print(type(python_str),python_str)
+
+
+
+
 
 
 

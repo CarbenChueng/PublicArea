@@ -318,6 +318,14 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
   <component name="ProjectId" id="2TGnXFEzzMkY6TCPW33pNaEpP6N" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -338,22 +346,22 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="CPPToolchains" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/_PythonProject/_04_YellowPerson" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.Yellow_Train">
+  <component name="RunManager" selected="Python.test">
     <configuration name="Code" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Code" TARGET_NAME="Code" CONFIG_NAME="Release" RUN_TARGET_PROJECT_NAME="Code" RUN_TARGET_NAME="Code">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
     <configuration name="Yellow_Net" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
@@ -471,10 +479,10 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.test" />
         <item itemvalue="Python.Yellow_Train" />
         <item itemvalue="Python.Yellow_Net" />
         <item itemvalue="Python.img_data" />
-        <item itemvalue="Python.test" />
         <item itemvalue="Python.sample" />
       </list>
     </recent_temporary>
@@ -491,7 +499,14 @@
       <workItem from="1690851264451" duration="21000" />
       <workItem from="1690854730801" duration="42263000" />
       <workItem from="1691068376202" duration="24209000" />
-      <workItem from="1691204613154" duration="41225000" />
+      <workItem from="1691204613154" duration="41974000" />
+      <workItem from="1691597413577" duration="247000" />
+      <workItem from="1691597670579" duration="78000" />
+      <workItem from="1691597762050" duration="524000" />
+      <workItem from="1691598312780" duration="427000" />
+      <workItem from="1691598750648" duration="2852000" />
+      <workItem from="1691630633200" duration="3274000" />
+      <workItem from="1691634125665" duration="14087000" />
     </task>
     <servers />
   </component>
