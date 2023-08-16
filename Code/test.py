@@ -7,6 +7,7 @@ from torch.nn import *
 from thop import profile, clever_format
 from torchvision import datasets, transforms
 from torch.utils.data import DataLoader, Dataset
+
 # import torch.backends.mps as mps,json
 
 # from _PythonProject._01_DigitalRecognition.write_net import Net
@@ -111,14 +112,42 @@ from torch.utils.data import DataLoader, Dataset
 #         file_bak.writelines(lines)
 
 
-d1 = {"name":"carben","age":18}
-json_str = json.dumps(d1)#转成json
-print(type(json_str),json_str)
-python_str = json.loads(json_str)#转成python
-print(type(python_str),python_str)
+# d1 = {"name": "carben", "age": 18}
+# json_str = json.dumps(d1)  # 转成json
+# print(type(json_str), json_str)
+# python_str = json.loads(json_str)  # 转成python
+# print(type(python_str), python_str)
+
+# data = [
+#     ['path', 'x', 'y', 'W', 'h'],
+#     ['1.png', '100', '100', '200', '200'],
+#     ['2.png', '50', '100', '100', '100'],
+#     ['3.png', '200', '50', '150', '100'],
+#     ['4.png', '150', '100', '100', '100']
+# ]
+#
+# with open("data.txt","w+",encoding="UTF-8") as f:
+#
+#     for i in data:
+#         for e in i:
+#         # print(i)
+#             f.write(e +"\t")
+#         f.write("\n")
+# with open("data.txt","r",encoding="UTF-8") as af:
+#     print(af.read())
+
+# boxes = numpy.array([[6, 17, 8, 9], [33,66,55,11],[10, 21, 15, 25]])
+# x = numpy.argsort(boxes[:,0])
+# new_boxes = boxes[x]
+# print(new_boxes[0])
 
 
-
+img = cv2.imread("/Users/carbenchueng/Desktop/2-Data/Celeba/sample/21/202599.jpg")
+cv2.rectangle(img,(131,136),(264,293),(0,0,255),thickness=3)
+cv2.imshow("pic",img)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+# 161 115 254 228
 
 
 

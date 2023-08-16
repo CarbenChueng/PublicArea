@@ -54,7 +54,7 @@ def nms(boxes, thresh=0.3, isMin = False):
         index = np.where(iou(a_box, b_boxes,isMin) < thresh) #将阈值小于0.3的建议框保留下来，返回保留框的索引
         _boxes = b_boxes[index] #循环控制条件；取出阈值小于0.3的建议框
 
-    if _boxes.shape[0] > 0: ##最后一次，结果只用1st个符合或只有一个符合，若框的个数大于1；★此处_boxes调用的是whilex循环里的，此判断条件放在循环里和外都可以（只有在函数类外才可产生局部作用于）
+    if _boxes.shape[0] > 0: ##最后一次，结果只用1st个符合或只有一个符合，若框的个数大于1；★此处_boxes调用的是while循环里的，此判断条件放在循环里和外都可以（只有在函数类外才可产生局部作用于）
         r_boxes.append(_boxes[0]) #将此框添加到列表中
     #stack组装为矩阵：:将列表中的数据在0轴上堆叠（行方向）
     return np.stack(r_boxes)
@@ -74,13 +74,13 @@ def convert_to_square(bbox):
 
 
 if __name__ == '__main__':
-    # a = np.array([1,1,11,11])
-    # bs = np.array([[1,1,10,10],[11,11,20,20]])
-    # print(iou(a,bs))
+    a = np.array([1,1,11,11])
+    bs = np.array([[1,1,10,10],[11,11,20,20]])
+    print(iou(a,bs))
 
-    bs = np.array([[1, 1, 10, 10, 40], [1, 1, 9, 9, 10], [9, 8, 13, 20, 15], [6, 11, 18, 17, 13]])
-    # print(bs[:,3].argsort())
-    print(nms(bs,thresh=0.3))
+    # bs = np.array([[1, 1, 10, 10, 40], [1, 1, 9, 9, 10], [9, 8, 13, 20, 15], [6, 11, 18, 17, 13]])
+    # # print(bs[:,3].argsort())
+    # print(nms(bs,thresh=0.3))
 
 # ★★★生成样本是不注释会有影响
 # #注释：

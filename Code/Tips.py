@@ -22,15 +22,13 @@ Clion：
 
 10：option  command enter：光标不动，向下移动并且增加一行
 
-11：command up：选择文件
+11：command w：关闭当前代码页
 
-12：command w：关闭当前代码页
+12：command up：选择文件
 
-13：command up：选择文件
+13：command option 左/右：切换代码页
 
-14：command option 左/右：切换代码页
 
-15：command option 左/右：切换代码页
 
 
 Ubantu：

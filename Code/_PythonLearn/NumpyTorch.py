@@ -76,11 +76,11 @@ from tqdm import tqdm
 # aa = a1[:,3:].reshape(-1)
 # print(aa[[1,5,7,11]])
 # b1 = np.array([[True,False,False,True],[True,True,False,False]])
-# a3 = np.arange(8).reshape((2,4))
+a3 = np.arange(8).reshape((2,4))
 # print(a2[...,2])
 # print(a2[a2>10])
-# print(a3[b1])
-# print(np.where(a>3,100,0)) #满足条件变成100，否则为零
+print(a3)
+print(np.where(a3>3)) #满足条件变成100，否则为零
 # print(np.argwhere(a>1)) #查找大于1的元素的下标
 
 # a = np.array([[1, 2], [2, 4], [2, 4]])
