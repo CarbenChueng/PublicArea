@@ -20,16 +20,17 @@ class FaceDataset(Dataset):
 
         cond = torch.Tensor([int(strs[1])])
         offset = torch.Tensor([float(strs[2]),float(strs[3]),float(strs[4]),float(strs[5])])
-        #
-        img_path = os.path.join(self.path,strs[0])
+        print(offset)
+
+        # img_path = os.path.join(self.path,strs[0])
         # img = Image.open(img_path)
         # print((torch.Tensor(np.array(img))/255.-0.5).shape)
         # img.show()
-        img_data = torch.Tensor(np.array(Image.open(img_path))/255. - 0.5)
-        img_data = img_data.permute(2,0,1)
-        return img_data,cond,offset
+        # img_data = torch.Tensor(np.array(Image.open(img_path))/255. - 0.5)
+        # img_data = img_data.permute(2,0,1)
+        # return img_data,cond,offset
 if __name__ == '__main__':
-    face = FaceDataset(r"/Users/kabun/Desktop/3-Data/Celeba/target/48/")
-    print(face[0][0].shape)
-    print(face[0][1].shape)
-    print(face[0][2].shape)
+    face = FaceDataset(r"/Users/carbenchueng/Desktop/2-Data/Celeba/test_face/48")
+    print(face[0])
+    # print(face[0][1].shape)
+    # print(face[0][2].shape)

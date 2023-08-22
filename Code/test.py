@@ -1,4 +1,4 @@
-import json
+import json,random,time,pyautogui
 import os, torch, numpy, cv2, turtle
 from matplotlib import pyplot as plt
 from tqdm import tqdm
@@ -141,15 +141,89 @@ from torch.utils.data import DataLoader, Dataset
 # new_boxes = boxes[x]
 # print(new_boxes[0])
 
-
-img = cv2.imread("/Users/carbenchueng/Desktop/2-Data/Celeba/sample/21/202599.jpg")
-cv2.rectangle(img,(131,136),(264,293),(0,0,255),thickness=3)
-cv2.imshow("pic",img)
-cv2.waitKey(0)
-cv2.destroyAllWindows()
-# 161 115 254 228
+# igg = Image.open("/Users/carbenchueng/Desktop/2-Data/Celeba/sample/012022.jpg")
+# print(igg.size)
 
 
+# img = cv2.imread("/Users/carbenchueng/Desktop/2-Data/Celeba/sample/000440.jpg")
+# cv2.rectangle(img,(23,43),(69,103),(0,0,255),thickness=3)
+# cv2.drawMarker(img,(165,184),(0,0,255),thickness=2)
+# cv2.drawMarker(img,(244,176),(0,0,255),thickness=2)
+# cv2.drawMarker(img,(196,249),(0,0,255),thickness=2)
+# cv2.drawMarker(img,(194,271),(0,0,255),thickness=2)
+# cv2.drawMarker(img,(266,260),(0,0,255),thickness=2)
+# cv2.imshow("pic",img)
+# cv2.waitKey(0)
+# cv2.destroyAllWindows()
+# 150 130 198 191
+
+
+# x = torch.randn(1,1,15,15)
+# lays = Sequential(
+#     Conv2d(1,1,4,1),
+#     Conv2d(1,1,4,1),
+#     Conv2d(1,1,4,1),
+#     Conv2d(1,1,4,1),
+#     Conv2d(1,1,3,1),
+#     Conv2d(1,1,3,1),
+    # Conv2d(1,1,3,1),
+    # Conv2d(1,1,3,1),
+    # Conv2d(1,1,3,1),
+    # Conv2d(1,1,3,1),
+# )
+
+# print(lays(x).shape)
+
+# x = torch.tensor((1,2,3,4,5,6))
+# print(x[x>=2])
+# print(torch.unsqueeze(x,dim=0))
+
+
+# for i in enumerate(tqdm(range(10))):
+#     print(i)
+#     time.sleep(1)
+
+# img = Image.open("/Users/carbenchueng/Desktop/1-Git/Code/_Image/1.jpg")
+# print(img.size)
+# face_crop = img.crop([100,100,200,200])
+# face_resize = face_crop.resize((100, 100), Image.Resampling.LANCZOS)
+# face_resize1 = face_crop.resize((100, 100))
+
+#1：读取到两个文件的内容 一条一条的读
+#2：把五官的坐标点在label的末端添加
+
+# conv = Conv2d(1,1,7)
+#
+# class Net(Module):
+#     def __init__(self):
+#         super(Net, self).__init__()
+#         self.layers = Sequential(
+#             Conv2d(1,1,3),
+#             PReLU(),
+#             Conv2d(1,1,3),
+#             PReLU(),
+#             Conv2d(1,1,3),
+#             PReLU(),
+#
+#         )
+#
+#     def forward(self,x):
+#         return self.layers(x)
+#
+# net = Net()
+# x = torch.randn(1,1,7,7)
+# y1 = conv(x)
+# y2 = net(x)
+# print(y1.shape)
+# print(y2.shape)
+
+# side_len = np.random.randint(face_size, min(img_w, img_h) / 2)
+# side_len = numpy.random.randint(48, max(63, 87) / 2)
+# side_len = numpy.random.randint(8, 5)
+# print(side_len)
+
+ff = os.path.exists("/_PythonProject/_05_MTCNN/parameter/onet.pt")
+print(ff)
 
 
 

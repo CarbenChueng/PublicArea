@@ -95,6 +95,73 @@ from mpl_toolkits.mplot3d import Axes3D  # 导入3d坐标系
 # print(img.mode)
 # img.show()
 
+# ===========================================图像切分显示===================================
+# def ImgCrop():
+#     img = Image.open("/Users/carbenchueng/Desktop/1-Git/Code/_Image/1.jpg")
+#     w,h = img.size
+#     # print(w,h)
+#     size_w = w//3
+#     size_h = h//3
+#     for i in range(3):
+#         for j in range(3):
+#             box = (size_w*j,size_h*i,size_w*(j+1),size_h*(i+1))
+#             spl_img = img.crop(box)
+#             spl_img.save(f"/Users/carbenchueng/Desktop/1-Git/Code/_Image/{999}{i}{j}.jpg")
+#
+# def ImgShow():
+#     img_1 = Image.open("/Users/carbenchueng/Desktop/1-Git/Code/_Image/99900.jpg")
+#     img_2 = Image.open("/Users/carbenchueng/Desktop/1-Git/Code/_Image/99901.jpg")
+#     img_3 = Image.open("/Users/carbenchueng/Desktop/1-Git/Code/_Image/99902.jpg")
+#     img_4 = Image.open("/Users/carbenchueng/Desktop/1-Git/Code/_Image/99910.jpg")
+#     img_5 = Image.open("/Users/carbenchueng/Desktop/1-Git/Code/_Image/99911.jpg")
+#     img_6 = Image.open("/Users/carbenchueng/Desktop/1-Git/Code/_Image/99912.jpg")
+#     img_7 = Image.open("/Users/carbenchueng/Desktop/1-Git/Code/_Image/99920.jpg")
+#     img_8 = Image.open("/Users/carbenchueng/Desktop/1-Git/Code/_Image/99921.jpg")
+#     img_9 = Image.open("/Users/carbenchueng/Desktop/1-Git/Code/_Image/99922.jpg")
+#     plt.subplot(3,3,1)
+#     plt.title("01")
+#     plt.axis(False)
+#     plt.imshow(img_1)
+#     plt.subplot(3,3,2)
+#     plt.title("02")
+#     plt.axis(False)
+#     plt.imshow(img_2)
+#     plt.subplot(3,3,3)
+#     plt.title("03")
+#     plt.axis(False)
+#     plt.imshow(img_3)
+#     plt.subplot(3,3,4)
+#     plt.title("04")
+#     plt.axis(False)
+#     plt.imshow(img_4)
+#     plt.subplot(3,3,5)
+#     plt.title("05")
+#     plt.axis(False)
+#     plt.imshow(img_5)
+#     plt.subplot(3,3,6)
+#     plt.title("06")
+#     plt.axis(False)
+#     plt.imshow(img_6)
+#     plt.subplot(3,3,7)
+#     plt.title("07")
+#     plt.axis(False)
+#     plt.imshow(img_7)
+#     plt.subplot(3,3,8)
+#     plt.title("08")
+#     plt.axis(False)
+#     plt.imshow(img_8)
+#     plt.subplot(3,3,9)
+#     plt.title("09")
+#     plt.axis(False)
+#     plt.imshow(img_9)
+#     plt.show()
+#
+# # ImgCrop()
+# ImgShow()
+
+
+
+
 
 # ===========================================3D画图===================================
 
@@ -145,7 +212,7 @@ from mpl_toolkits.mplot3d import Axes3D  # 导入3d坐标系
 # plt.show()
 
 
-# ======================= ========生成验证码===============================================
+# ================================生成验证码===============================================
 
 # class GenerateCoder(object):
 #
@@ -183,7 +250,8 @@ from mpl_toolkits.mplot3d import Axes3D  # 导入3d坐标系
 #
 # gc = GenerateCoder()
 # img = gc.encoder()
-# plt.imshow(img)
+# plt.title("new_1")
+# plt.imshow(img,cmap="Reds")
 # plt.axis(False)#隐藏坐标轴
 # plt.show()
 

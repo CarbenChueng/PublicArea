@@ -80,6 +80,7 @@ class Detector:
             min_side_len = min(_w,_h)
 
         return utils.nms(np.array(boxes),p_nms)
+
     def __box(self,start_index,offset,cls,scale,stride = 2,side_len = 12):
         _x1 = (start_index[1].float() * stride)/scale
         _y1 = (start_index[0].float() * stride)/scale

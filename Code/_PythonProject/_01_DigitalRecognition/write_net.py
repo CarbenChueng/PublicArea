@@ -24,11 +24,15 @@ class DigitalNet(Module):
     #网络前向计算
     def forward(self,x):
         x = self.layers(x)
-        x = x.reshape(-1,64*9*9)
+        # print(x.shape)
+        x = x.reshape(x.size(0),-1)
+        # print(x.shape)
+        # x = x.reshape(-1,64*9*9)
         return self.out_layer(x)
 
 if __name__ == '__main__':
     net = DigitalNet()
-    x = torch.randn((1,1,28,28))
+    x = torch.randn((5,1,28,28))
     y = net(x)
-    print(type(y.shape[1]))
+    print(y.shape)
+    # print(y)
