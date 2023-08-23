@@ -23,13 +23,13 @@ class Trainer:
 
         self.optimizer = optim.Adam(self.net.parameters())
 
-        # if os.path.exists(self.save_path):
+        if os.path.exists(self.save_path):
         #     print("aa")
-        #     net.load_state_dict(torch.load(self.save_path))
+            net.load_state_dict(torch.load(self.save_path))
 
     def train(self):
         faceDateset = FaceDataSet(self.dataset_path)
-        dataloader = DataLoader(faceDateset,batch_size=512,shuffle=True,num_workers=2,drop_last=True)
+        dataloader = DataLoader(faceDateset,batch_size=512,shuffle=True,num_workers=1,drop_last=True)
 
         while True:
             for i,(img_data_,category_,offset_) in enumerate(tqdm(dataloader)):
@@ -60,21 +60,19 @@ class Trainer:
                 loss.backward()           # 计算梯度
                 self.optimizer.step()    # 优化网络
 
-                self.summaryWriter.add_scalars = ("loss",{"cls_loss":cls_loss,"offset_loss":offset_loss},i)
-                self.summaryWriter.add_scalar = ("loss",loss,i)
-                # 保存
-                if (i+1)/100==0:
+                self.summaryWriter.add_scalars = ("loss",{"loss":loss,"cls_loss":cls_loss,"offset_loss":offset_loss},i)
 
-                    #输出损失：loss-->gpu-->cup（变量）-->tensor-->array
+                # 保存
+                if i%100==0:
+                #输出损失：loss-->gpu-->cup（变量）-->tensor-->array
                     print("i=",i ,"loss:", loss.cpu().data.numpy(), " cls_loss:", cls_loss.cpu().data.numpy(), " offset_loss",
                           offset_loss.cpu().data.numpy())
-
                     torch.save(self.net.state_dict(), self.save_path) # state_dict保存网络参数，save_path参数保存路径
-                    print("save success")
+                    print("save succeed")
 
 if __name__ == '__main__':
     net = PNet()
 
-    trainer = Trainer(net, "parameter/onet.pt", "/Users/carbenchueng/Desktop/2-Data/Celeba/target/12")
+    trainer = Trainer(net, "parameter/pnet.pt", "/Users/carbenchueng/Desktop/2-Data/Celeba/target/12")
     trainer.train()
 
