@@ -37,7 +37,7 @@ for face_size in [48]:
         part_anno_file = open(part_anno_filename, "w")
         #
         for i, line in enumerate(tqdm(open(anno_src))):
-            # try:
+
             strs = line.split()
             # strs = line.strip().split()
             # print(strs)
@@ -117,26 +117,29 @@ for face_size in [48]:
 
                 # 生成负样本
                 _boxes = np.array(boxes)
-                print(_boxes)
-                for _i in range(1):
-                    print(face_size,min(img_w,img_h)/2)
-                    # side_len = np.random.randint(face_size, min(img_w, img_h) / 2)
-                    # print(side_len)
-                    # x_ = np.random.randint(0, img_w - side_len)
-                    # y_ = np.random.randint(0, img_h - side_len)
-                    # crop_box = np.array([x_, y_, x_ + side_len, y_ + side_len])
-                    #
-                    # if np.max(IouPro(crop_box, _boxes)) < 0.08:   # 在加IOU进行判断：保留小于0.3的那一部分；原为0.3
-                    #     face_crop = img.crop(crop_box)  # 抠图
-                    #     face_resize = face_crop.resize((face_size, face_size), Image.Resampling.LANCZOS) #LANCZOS：平滑,抗锯齿
-                    #
-                    #     negative_anno_file.write(f"negative/{negative_count}.jpg 0 0 0 0 0\n")
-                    #     negative_anno_file.flush()
-                    #     face_resize.save(os.path.join(negative_image_dir, "{0}.jpg".format(negative_count)))
-                    #     negative_count += 1
-            # except Exception as e:
-            #     traceback.print_exc()
+
+                for _i in range(10):
+                    side_len = np.random.randint(face_size, min(img_w, img_h) / 2)
+                    # side_len = np.random.randint(face_size, min(w, h) / 2) #这是用来测试捕获异常的
+
+                    x_ = np.random.randint(0, img_w - side_len)
+                    y_ = np.random.randint(0, img_h - side_len)
+                    crop_box = np.array([x_, y_, x_ + side_len, y_ + side_len])
+
+                    if np.max(IouPro(crop_box, _boxes)) < 0.08:   # 在加IOU进行判断：保留小于0.3的那一部分；原为0.3
+                        face_crop = img.crop(crop_box)  # 抠图
+                        face_resize = face_crop.resize((face_size, face_size), Image.Resampling.LANCZOS) #LANCZOS：平滑,抗锯齿
+
+                        negative_anno_file.write(f"negative/{negative_count}.jpg 0 0 0 0 0\n")
+                        negative_anno_file.flush()
+                        face_resize.save(os.path.join(negative_image_dir, "{0}.jpg".format(negative_count)))
+                        negative_count += 1
 
     except Exception as e:
-        traceback.print_exc()
+        print("产生异常 :",e)
+        with open("Erro.txt","a+") as ff:
+            ff.write(str(e))
+    # finally:
+    #     positive_anno_file.close()
+
 

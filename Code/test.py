@@ -145,8 +145,10 @@ from torch.utils.data import DataLoader, Dataset
 # print(igg.size)
 
 
-# img = cv2.imread("/Users/carbenchueng/Desktop/2-Data/Celeba/sample/000440.jpg")
-# cv2.rectangle(img,(23,43),(69,103),(0,0,255),thickness=3)
+# img = cv2.imread("/Users/carbenchueng/Desktop/2-Data/Celeba/sample/000477.jpg")
+# img = cv2.imread("/Users/carbenchueng/Desktop/2-Data/Celeba/sample/000441.jpg")
+# cv2.rectangle(img,(30,56),(93,143),(0,0,255),thickness=3)
+# cv2.rectangle(img,(115,152),(213,275),(0,0,255),thickness=3)
 # cv2.drawMarker(img,(165,184),(0,0,255),thickness=2)
 # cv2.drawMarker(img,(244,176),(0,0,255),thickness=2)
 # cv2.drawMarker(img,(196,249),(0,0,255),thickness=2)
@@ -178,10 +180,6 @@ from torch.utils.data import DataLoader, Dataset
 # print(x[x>=2])
 # print(torch.unsqueeze(x,dim=0))
 
-
-# for i in enumerate(tqdm(range(10))):
-#     print(i)
-#     time.sleep(1)
 
 # img = Image.open("/Users/carbenchueng/Desktop/1-Git/Code/_Image/1.jpg")
 # print(img.size)
@@ -217,13 +215,48 @@ from torch.utils.data import DataLoader, Dataset
 # print(y1.shape)
 # print(y2.shape)
 
-# side_len = np.random.randint(face_size, min(img_w, img_h) / 2)
-# side_len = numpy.random.randint(48, max(63, 87) / 2)
-# side_len = numpy.random.randint(8, 5)
-# print(side_len)
 
-ff = os.path.exists("/_PythonProject/_05_MTCNN/parameter/onet.pt")
-print(ff)
+try:
+
+    with open("/Users/carbenchueng/Desktop/2-Data/Celeba/test_face/48/positive.txt", "r") as positive_anno_file:
+        fsss = positive_anno_file.read()
+        print(fsss)
+    with open("/Users/carbenchueng/Desktop/2-Data/Celeba/test_face/48/negative.txt", "r") as negative_anno_file:
+        pass
+    with open("/Users/carbenchueng/Desktop/2-Data/Celeba/test_face/48/part.txt", "r") as part_anno_file:
+        pass
+
+    # print("-"*50)
+    # anno_src =  "/Users/carbenchueng/Desktop/2-Data/Celeba/label_1.txt"
+    # img_dir = r"/Users/carbenchueng/Desktop/2-Data/Celeba/sample"
+    # for i, line in enumerate(tqdm(open(anno_src))):
+    #     strs = line.split()
+    #     # print(i,line)
+    #     img_file_name = strs[0]
+    #
+    #     img_file = os.path.join(img_dir, img_file_name)
+    #     print(img_file)
+    #     with Image.open(img_file) as img:  # 打开图片文件
+    #         img_w, img_h = img.size
+    #         print(img_w,img_h)
+    #         x1 = int(strs[1])
+    #         x2 = int(strs[3])
+    #         y1 = int(strs[2])
+    #         y2 = int(strs[4])
+    #         w = x2 - x1
+    #         h = y2 - y1
+    #         print(w,h)
+    #         for _i in range(1):
+    #             # side_len = numpy.random.randint(48, min(img_w, img_h) / 2)
+    #             side_len = numpy.random.randint(48, min(63, 87) / 2)
+    #             # side_len = numpy.random.randint(8, 5)
+    #             print(side_len)
+
+except Exception as e:
+    print(e)
+    ff = open("Erro.txt","a+")
+    ff.write(str(e))
+
 
 
 

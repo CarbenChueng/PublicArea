@@ -23,7 +23,7 @@ r_nms = 0.5  # 原为0.5
 #
 # O网络：
 o_cls = 0.999  # 原为0.97
-o_nms = 0.7  # 原为0.7
+o_nms = 0.6  # 原为0.7
 Device = "mps" if mps.is_available() else "cpu"
 
 
@@ -237,7 +237,8 @@ class Detector:
         t_sum = t_pnet + t_rnet + t_onet
         print("total:{0} pnet:{1} rnet:{2} onet:{3}".format(t_sum, t_pnet, t_rnet, t_onet))
 
-        return onet_boxes
+        return rnet_boxes
+        # return onet_boxes
 
 
 if __name__ == '__main__':
@@ -262,7 +263,6 @@ if __name__ == '__main__':
             print("conf:", box[4])  # 置信度
             imDraw.rectangle((x1, y1, x2, y2), outline='red', width=2)
             # im.show() # 每循环一次框一个人脸
-        im.show()
         # exit()
 
 # 备注：以上提到的例子1、2、3见“notes/13-detect”
