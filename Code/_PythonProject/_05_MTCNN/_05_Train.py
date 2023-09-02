@@ -9,7 +9,7 @@ from _05_DataSet import FaceDataSet
 from _05_Net import *
 
 
-Device = "mps" if mps.is_available() else "cpu"
+Device = torch.device("mps" if mps.is_available() else "cpu")
 
 class Trainer:
     def __init__(self,net,save_path,dataset_path):
@@ -25,7 +25,7 @@ class Trainer:
 
         if os.path.exists(self.save_path):
         #     print("aa")
-            net.load_state_dict(torch.load(self.save_path))
+            net.load_state_dict(torch.load(self.save_path,map_location=Device))
 
     def train(self):
         faceDateset = FaceDataSet(self.dataset_path)

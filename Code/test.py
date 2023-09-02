@@ -7,6 +7,7 @@ from torch.nn import *
 from thop import profile, clever_format
 from torchvision import datasets, transforms
 from torch.utils.data import DataLoader, Dataset
+from torch.backends import mps
 
 # import torch.backends.mps as mps,json
 
@@ -215,47 +216,15 @@ from torch.utils.data import DataLoader, Dataset
 # print(y1.shape)
 # print(y2.shape)
 
+#查看所在的设备
+Device1 = torch.device("mps" if mps.is_available() else "cpu")
+Device2 = torch.device("cpu")
 
-try:
-
-    with open("/Users/carbenchueng/Desktop/2-Data/Celeba/test_face/48/positive.txt", "r") as positive_anno_file:
-        fsss = positive_anno_file.read()
-        print(fsss)
-    with open("/Users/carbenchueng/Desktop/2-Data/Celeba/test_face/48/negative.txt", "r") as negative_anno_file:
-        pass
-    with open("/Users/carbenchueng/Desktop/2-Data/Celeba/test_face/48/part.txt", "r") as part_anno_file:
-        pass
-
-    # print("-"*50)
-    # anno_src =  "/Users/carbenchueng/Desktop/2-Data/Celeba/label_1.txt"
-    # img_dir = r"/Users/carbenchueng/Desktop/2-Data/Celeba/sample"
-    # for i, line in enumerate(tqdm(open(anno_src))):
-    #     strs = line.split()
-    #     # print(i,line)
-    #     img_file_name = strs[0]
-    #
-    #     img_file = os.path.join(img_dir, img_file_name)
-    #     print(img_file)
-    #     with Image.open(img_file) as img:  # 打开图片文件
-    #         img_w, img_h = img.size
-    #         print(img_w,img_h)
-    #         x1 = int(strs[1])
-    #         x2 = int(strs[3])
-    #         y1 = int(strs[2])
-    #         y2 = int(strs[4])
-    #         w = x2 - x1
-    #         h = y2 - y1
-    #         print(w,h)
-    #         for _i in range(1):
-    #             # side_len = numpy.random.randint(48, min(img_w, img_h) / 2)
-    #             side_len = numpy.random.randint(48, min(63, 87) / 2)
-    #             # side_len = numpy.random.randint(8, 5)
-    #             print(side_len)
-
-except Exception as e:
-    print(e)
-    ff = open("Erro.txt","a+")
-    ff.write(str(e))
+x1 = torch.tensor([1,2,3]).to(Device1)
+x2 = torch.tensor([6,7,8]).to(Device2)
+# x.to(Device1)
+print(x1.device)
+print(x2.device)
 
 
 

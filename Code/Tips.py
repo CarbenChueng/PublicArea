@@ -30,9 +30,9 @@ Clion：
 
 
 
-
 Ubantu：
 ls -lah
+ifconfig
 who -q/-u
 pwd
 ping xxxxx.com
@@ -43,4 +43,13 @@ touch xxx.txt
 rm    xxx.txt
 clear
 
+
+
+mac：
+shift 空格  拆字输入（男女男 嬲）
+option  command v：粘贴
+command  h：隐藏当前文件
+command  option h：隐藏除当前以外的文件
+option  关闭：关闭全部此类文件
+option  单击声音：更改输入输出设备
 """
