@@ -217,17 +217,49 @@ from torch.backends import mps
 # print(y2.shape)
 
 #查看所在的设备
-Device1 = torch.device("mps" if mps.is_available() else "cpu")
-Device2 = torch.device("cpu")
+# Device1 = torch.device("mps" if mps.is_available() else "cpu")
+# Device2 = torch.device("cpu")
+#
+# x1 = torch.tensor([1,2,3]).to(Device1)
+# x2 = torch.tensor([6,7,8]).to(Device2)
+# # x.to(Device1)
+# print(x1.device)
+# print(x2.device)
 
-x1 = torch.tensor([1,2,3]).to(Device1)
-x2 = torch.tensor([6,7,8]).to(Device2)
-# x.to(Device1)
-print(x1.device)
-print(x2.device)
+# x1 = torch.randn([1,3,3,3])
+# x2 = torch.randn(1,3,3,3)
+# print(x1.shape,x2.shape)
+
+cap = cv2.VideoCapture(1)
+while True:
+    retval,img = cap.read()
+    if not retval:
+        print("defaule")
+    cv2.imshow("img",img)
+    key = cv2.waitKey(25)
+    if key == ord("q"):
+        break
+
+cap.release()
+cv2.destroyAllWindows()
 
 
-
-
+#center loss
+# data = torch.Tensor([[3,4],[5,6],[7,8],[9,8],[6,5]])
+# # print(data.shape)
+# label = torch.Tensor([1,0,0,1,0])
+# center = torch.Tensor([[3,3],[7,7]])
+#
+# center_exp = center.index_select(dim=0,index = label.long())
+# print(center_exp)
+#
+# count = torch.histc(label,bins=2,min=0,max=1)
+# print(count)
+# count_exp = count.index_select(dim=0,index= label.long())
+# print(count_exp)
+#
+# center_loss = torch.sum(torch.div(torch.sqrt(torch.sum(torch.pow(data-center_exp,2),dim=1)),count_exp))
+# # center_loss = torch.sum(torch.pow(data-center_exp,2))
+# print(center_loss)
 
 

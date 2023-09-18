@@ -1,9 +1,11 @@
+import time
 import cv2
 import numpy as np
 from PIL import Image
 import matplotlib.pyplot as plt
 
-#=====================================看图===========================================
+
+# =====================================看图===========================================
 # 读取图片
 # img = cv2.imread("Image/handsome.jpg",0)#代表灰度图
 # img = Image.fromarray(img)#因为经过cv2，所以图片颜色有问题opencv变成bgr
@@ -13,7 +15,7 @@ import matplotlib.pyplot as plt
 # cv2.destroyAllWindows()#摧毁所有窗口
 
 
-#=====================================画图===========================================
+# =====================================画图===========================================
 # img = np.random.randint(0,255,(200,300,3),np.uint8)
 # img = np.zeros((200,300,3),np.uint8)
 # img[:,:,2] = 255
@@ -23,22 +25,56 @@ import matplotlib.pyplot as plt
 # cv2.imshow("s",img)
 # cv2.waitKey(0)
 
-#=====================================视频，摄像头===========================================
+# =====================================视频，摄像头===========================================
 
-# cap = cv2.VideoCapture("../Image/cbtb00005.mp4")#可以读取视频，网络视频（视频格式有要求），数字0不带引号表示摄像头
 # # cap = cv2.VideoCapture("http://ivi.bupt.edu.cn/hls/cctv1hd.m3u8")#可以读取视频，网络视频（视频格式有要求），数字0不带引号表示摄像头
-cap = cv2.VideoCapture(0)#0：前置摄像头，1：后置摄像头
-while True:
-    ret,frame = cap.read()#ret返回bool值，判断是否读取成功，frame就是读取到的每一帧画面
-    cv2.imshow("frame",frame)
-    if cv2.waitKey(41) & 0XFF == ord("q"):
-        break
+# cap = cv2.VideoCapture(1)#可以读取视频，网络视频（视频格式有要求），数字0不带引号表示摄像头
+cap = cv2.VideoCapture("/Users/carbenchueng/Desktop/2-Data/yolov3训练数据-金鱼/20221111_145850.mp4")#0：前置摄像头，1：后置摄像头
+i=0
+try:
+    while cap.isOpened():
+        lt = time.localtime()
+        # print(lt[5])
+        ret,frame = cap.read()#ret返回bool值，判断是否读取成功，frame就是读取到的每一帧画面
+        if not ret:
+            print("end!!")
+        cv2.namedWindow("frame",cv2.WINDOW_NORMAL)
+        cv2.resizeWindow("frame",1000,565)
+        cv2.moveWindow("frame",2000,100)
+        cv2.imshow("frame",frame)
+        # if lt[5]%2==0:
+        #
+        #     cv2.imwrite(f"/Users/carbenchueng/Desktop/2-Data/yolov3训练数据-金鱼/fish/p{i}.jpg",frame)
+        #     i+=1
 
-cap.release()#释放视频资源
-cv2.destroyAllWindows()#关闭窗口
+        key = cv2.waitKey(25)
+        # print(type(key))
 
+        # print(key)
+        # time.sleep(1)
+        if key == ord("q"):
+            break
 
-#=====================================色彩转换===========================================
+    cap.release()
+    cv2.destroyAllWindows()#关闭窗口
+except Exception as e:
+    print(e)
+    ff = open("Erro.txt","a+")
+    ff.write(str(e))
+    ff.close()
+
+# lt = time.localtime()
+# print(lt[5])
+
+# t1 = time.time()
+# print(time.strftime("%Y年-%m月-%d日 %H时%M分%S秒"))
+# time.sleep(2)
+# print(time.ctime())
+# t2 = time.time()
+# print(f"执行了{(t2-t1)}秒")
+# print(lt)
+
+# =====================================色彩转换===========================================
 
 # src = cv2.imread("../Image/paint.jpg")
 # dst = cv2.cvtColor(src,cv2.COLOR_BGR2GRAY)
@@ -61,7 +97,7 @@ cv2.destroyAllWindows()#关闭窗口
 # cv2.destroyAllWindows()
 
 
-#=====================================抠图===========================================
+# =====================================抠图===========================================
 # img = cv2.imread("../Image/4.jpg")
 # hsv = cv2.cvtColor(img,cv2.COLOR_BGR2HSV)
 # lower = np.array([1,110,100])
@@ -74,7 +110,7 @@ cv2.destroyAllWindows()#关闭窗口
 # cv2.destroyAllWindows()
 
 
-#=====================================图上画图===========================================
+# =====================================图上画图===========================================
 # img = cv2.imread("../Image/paint.jpg")
 # # 直线
 # cv2.line(img,(100,30),(210,180),color=(0,0,255),thickness=2)
@@ -84,7 +120,7 @@ cv2.destroyAllWindows()#关闭窗口
 # cv2.rectangle(img,(100,30),(210,180),color=(0,0,255),thickness=5)
 # # 椭圆形
 # cv2.ellipse(img,(300,600),(100,50),90,0,360,(0,255,0),thickness=2)
-#多边形
+# 多边形
 # pts = np.array([[10,5],[200,200],[300,600],[150,38]])
 # cv2.polylines(img,[pts],True,(255,0,0),thickness=2)
 #
@@ -93,7 +129,7 @@ cv2.destroyAllWindows()#关闭窗口
 # cv2.destroyAllWindows()
 
 
-#=====================================图上写字===========================================
+# =====================================图上写字===========================================
 # img = cv2.imread("../Image/handsome.jpg")
 # cv2.putText(img,"HELLO WORLD",(10,60),cv2.FONT_HERSHEY_SIMPLEX,2,(255,0,0),5,lineType=cv2.LINE_AA)
 # # (图片，内容，位置，字体，字体大小，颜色，抗锯齿)
@@ -103,7 +139,7 @@ cv2.destroyAllWindows()#关闭窗口
 # cv2.destroyAllWindows()
 
 
-#=====================================阀值===========================================
+# =====================================阀值===========================================
 # 全局二值化
 # img = cv2.imread("../Image/handsome.jpg")
 # gray = cv2.cvtColor(img,cv2.COLOR_BGRA2GRAY)
@@ -162,7 +198,7 @@ cv2.destroyAllWindows()#关闭窗口
 # plt.show()
 
 
-#=====================================图像加减(混合)===========================================
+# =====================================图像加减(混合)===========================================
 # x = np.uint8([250]) #array是不行的，会超过255
 # y = np.uint8([10])
 #
@@ -209,7 +245,7 @@ cv2.destroyAllWindows()#关闭窗口
 # cv2.destroyAllWindows()
 
 
-#=====================================图像变换===========================================
+# =====================================图像变换===========================================
 
 # src = cv2.imread("../Image/handsome.jpg")
 # w,h,c = src.shape
@@ -270,26 +306,6 @@ cv2.destroyAllWindows()#关闭窗口
 # cv2.imshow("a",img1)
 
 # cv2.waitKey(0)
-
-
-# va = cv2.VideoCapture(0)
-#
-#
-#
-# while True:
-#     su, im = va.read()
-#     cv2.imshow("a",im)
-#     if cv2.waitKey(1) & 0xff == ord("q"):
-#         break
-    # cv2.waitKey(0)
-
-
-
-
-
-
-
-
 
 
 

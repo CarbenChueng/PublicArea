@@ -17,26 +17,6 @@
 					<DistClean command="/usr/bin/make -j10 -f &quot;/Users/carbenchueng/Desktop/1-Git/Code/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="rebuild_cache">
-				<Option working_dir="/Users/carbenchueng/Desktop/1-Git/Code/cmake-build-release"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j10 -f &quot;/Users/carbenchueng/Desktop/1-Git/Code/cmake-build-release/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j10 -f &quot;/Users/carbenchueng/Desktop/1-Git/Code/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j10 -f &quot;/Users/carbenchueng/Desktop/1-Git/Code/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j10 -f &quot;/Users/carbenchueng/Desktop/1-Git/Code/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="edit_cache">
-				<Option working_dir="/Users/carbenchueng/Desktop/1-Git/Code/cmake-build-release"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j10 -f &quot;/Users/carbenchueng/Desktop/1-Git/Code/cmake-build-release/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j10 -f &quot;/Users/carbenchueng/Desktop/1-Git/Code/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j10 -f &quot;/Users/carbenchueng/Desktop/1-Git/Code/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j10 -f &quot;/Users/carbenchueng/Desktop/1-Git/Code/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
 			<Target title="Code">
 				<Option output="/Users/carbenchueng/Desktop/1-Git/Code/cmake-build-release/Code" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/Users/carbenchueng/Desktop/1-Git/Code/cmake-build-release"/>
@@ -78,6 +58,26 @@
 				</Compiler>
 				<MakeCommands>
 					<Build command="/usr/bin/make -j10 -f &quot;/Users/carbenchueng/Desktop/1-Git/Code/cmake-build-release/Makefile&quot;  VERBOSE=1 Code/fast"/>
+					<CompileFile command="/usr/bin/make -j10 -f &quot;/Users/carbenchueng/Desktop/1-Git/Code/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j10 -f &quot;/Users/carbenchueng/Desktop/1-Git/Code/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j10 -f &quot;/Users/carbenchueng/Desktop/1-Git/Code/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/carbenchueng/Desktop/1-Git/Code/cmake-build-release"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j10 -f &quot;/Users/carbenchueng/Desktop/1-Git/Code/cmake-build-release/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j10 -f &quot;/Users/carbenchueng/Desktop/1-Git/Code/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j10 -f &quot;/Users/carbenchueng/Desktop/1-Git/Code/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j10 -f &quot;/Users/carbenchueng/Desktop/1-Git/Code/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/carbenchueng/Desktop/1-Git/Code/cmake-build-release"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j10 -f &quot;/Users/carbenchueng/Desktop/1-Git/Code/cmake-build-release/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
 					<CompileFile command="/usr/bin/make -j10 -f &quot;/Users/carbenchueng/Desktop/1-Git/Code/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j10 -f &quot;/Users/carbenchueng/Desktop/1-Git/Code/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j10 -f &quot;/Users/carbenchueng/Desktop/1-Git/Code/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>

@@ -16,23 +16,23 @@ class DigitalNet(Module):
             PReLU(),
         )
 
-        self.out_layer = Sequential(
-            Linear(64*9*9,10),
-            Softmax(dim = 1)
-        )
+        # self.out_layer = Sequential(
+        #     Linear(64*9*9,10),
+        #     Softmax(dim = 1)
+        # )
 
     #网络前向计算
     def forward(self,x):
         x = self.layers(x)
-        # print(x.shape)
-        x = x.reshape(x.size(0),-1)
+        print(x.shape)
+        # x = x.reshape(x.size(0),-1)
         # print(x.shape)
         # x = x.reshape(-1,64*9*9)
-        return self.out_layer(x)
+        # return self.out_layer(x)
 
 if __name__ == '__main__':
     net = DigitalNet()
     x = torch.randn((5,1,28,28))
     y = net(x)
-    print(y.shape)
+    print(y)
     # print(y)

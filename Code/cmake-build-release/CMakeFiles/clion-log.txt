@@ -1,4 +1,0 @@
-/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Release -G "CodeBlocks - Unix Makefiles" /Users/carbenchueng/Desktop/1-Git/Code
--- Configuring done
--- Generating done
--- Build files have been written to: /Users/carbenchueng/Desktop/1-Git/Code/cmake-build-release
