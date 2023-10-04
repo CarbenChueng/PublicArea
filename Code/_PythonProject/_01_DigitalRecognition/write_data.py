@@ -15,8 +15,8 @@ train_data_sat = datasets.MNIST(root="/Users/carbenchueng/Desktop/2-Data",
 test_data_sat = datasets.MNIST(root="/Users/carbenchueng/Desktop/2-Data",
                                 train=False,download=False,
                                 transform=transforms.ToTensor())
-train_loader = DataLoader(train_data_sat,batch_size=1000,shuffle=True)
-test_loader = DataLoader(test_data_sat,batch_size=1000,shuffle=True)
+train_loader = DataLoader(train_data_sat,batch_size=500,shuffle=True)
+test_loader = DataLoader(test_data_sat,batch_size=100,shuffle=True)
 #显示数据集类别  classes
 # print(train_data_sat.classes)
 # img_data = train_data_sat.data[0]
@@ -31,6 +31,7 @@ if __name__ == '__main__':
     # net.load_state_dict(torch.load("./prarm/30.t"))
     opt = torch.optim.Adam(net.parameters())
     loss_func = MSELoss()
+    index= 0
     for epoch in tqdm(range(10000)):
         loss_sum = 0
         for i,(img,label) in enumerate(train_loader):
@@ -46,9 +47,10 @@ if __name__ == '__main__':
             train_loss.backward()
             opt.step()
 
-            if i%1000 == 0:
+            if i%500 == 0:
                 print("==========>train_loss",train_loss.item())
-            # sum_write.add_scalar("train_loss",train_loss.item(),epoch)
+            sum_write.add_scalar("train_loss",train_loss.item(),epoch)
+            sum_write.add_images("train_images",img[:100],epoch)
 
 
         test_loss_sum = 0
@@ -67,10 +69,12 @@ if __name__ == '__main__':
             acc = torch.mean(torch.eq(out,label).float())
             # acc_sum+=acc
 
-            if i%1000 == 0:
+            if i%500 == 0:
                 print("==========>test_loss",test_loss.item())
                 print("==========>acc       ",acc)
-            # sum_write.add_scalar("test_loss",test_loss.item(),epoch)
+            sum_write.add_scalar("test_loss",test_loss.item(),epoch)
+            # sum_write.add_images("test_images",img[:100],epoch)
         # print("==========>acc",acc_sum/i)
-        sum_write.add_scalars("loss",{"train_loss":train_loss,"test_loss":test_loss},epoch)
+        # sum_write.add_scalars("loss",{"train_loss":train_loss,"test_loss":test_loss},index)
+        # index = index +1
         # torch.save(net.state_dict(),f"./prarm/{epoch}.t")

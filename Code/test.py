@@ -1,5 +1,6 @@
 import json,random,time,pyautogui
 import os, torch, numpy, cv2, turtle
+from tensorboardX import SummaryWriter
 from matplotlib import pyplot as plt
 from tqdm import tqdm
 from PIL import Image
@@ -230,18 +231,18 @@ from torch.backends import mps
 # x2 = torch.randn(1,3,3,3)
 # print(x1.shape,x2.shape)
 
-cap = cv2.VideoCapture(1)
-while True:
-    retval,img = cap.read()
-    if not retval:
-        print("defaule")
-    cv2.imshow("img",img)
-    key = cv2.waitKey(25)
-    if key == ord("q"):
-        break
-
-cap.release()
-cv2.destroyAllWindows()
+# cap = cv2.VideoCapture(1)
+# while True:
+#     retval,img = cap.read()
+#     if not retval:
+#         print("defaule")
+#     cv2.imshow("img",img)
+#     key = cv2.waitKey(25)
+#     if key == ord("q"):
+#         break
+#
+# cap.release()
+# cv2.destroyAllWindows()
 
 
 #center loss

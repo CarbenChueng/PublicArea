@@ -243,13 +243,12 @@ class Detector:
 
 if __name__ == '__main__':
     # 多张图片检测
-    image_path = r"/Users/carbenchueng/Desktop/1-Git/Code/_PythonProject/_05_MTCNN/test_images/xx1.jpg"
-    # image_path = r"/Users/carbenchueng/Desktop/1-Git/Code/_Image/13.jpg"
+    # image_path = r"/Users/carbenchueng/Desktop/1-Git/Code/_PythonProject/_05_MTCNN/test_images/xx1.jpg"
+    image_path = r"/Users/carbenchueng/Desktop/1-Git/Code/_Image/13.jpg"
     detector = Detector()
     with Image.open(image_path) as im:  # 打开图片
 
         boxes = detector.detect(im)
-        # print(type(boxes))
         print("----------------------------")
         #
         print("size:", im.size)
@@ -262,7 +261,43 @@ if __name__ == '__main__':
             #
             print("conf:", box[4])  # 置信度
             imDraw.rectangle((x1, y1, x2, y2), outline='red', width=2)
-            # im.show() # 每循环一次框一个人脸
-        # exit()
+        im.show() # 每循环一次框一个人脸
+        exit()
 
 # 备注：以上提到的例子1、2、3见“notes/13-detect”
+
+    # cap = cv2.VideoCapture(1)
+    # detector = Detector()
+    # while True:
+    #     retval,img = cap.read()
+    #     imgs = detector.detect(img)
+    #     print(type(imgs))
+    #     print(imgs)
+    # #     h,w,c = img.shape
+    #     # cv2.namedWindow("img",cv2.WINDOW_NORMAL)
+    #     # cv2.resizeWindow("img",600,600)
+    #     # img = img.reshape(600,600)
+    #     # print(type(img))
+    #     # print(h,w,c)
+    #     exit()
+    #     if not retval:
+    #         print("defaule")
+    #     boxes = detector.detect(img)
+    #     print(type(boxes))
+    #
+    #     for box in boxes:  # 多个框，没循环一次框一个人脸
+    #         x1 = int(box[0])
+    #         y1 = int(box[1])
+    #         x2 = int(box[2])
+    #         y2 = int(box[3])
+    #         #
+    #         print("conf:", box[4])  # 置信度
+    #         cv2.rectangle(img,(x1,y1),(x2,y2),(0,0,255),thickness=2)
+    #     # im.show() # 每循环一次框一个人脸
+    #     cv2.imshow("img",img)
+    #     key = cv2.waitKey(25)
+    #     if key == ord("q"):
+    #         break
+    #
+    # cap.release()
+    # cv2.destroyAllWindows()
