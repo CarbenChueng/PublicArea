@@ -153,6 +153,30 @@ _C++Learn/00_test.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Code.dir/build.make CMakeFiles/Code.dir/_C++Learn/00_test.cpp.s
 .PHONY : _C++Learn/00_test.cpp.s
 
+_C++_DG/_01_.o: _C++_DG/_01_.cpp.o
+.PHONY : _C++_DG/_01_.o
+
+# target to build an object file
+_C++_DG/_01_.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Code.dir/build.make CMakeFiles/Code.dir/_C++_DG/_01_.cpp.o
+.PHONY : _C++_DG/_01_.cpp.o
+
+_C++_DG/_01_.i: _C++_DG/_01_.cpp.i
+.PHONY : _C++_DG/_01_.i
+
+# target to preprocess a source file
+_C++_DG/_01_.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Code.dir/build.make CMakeFiles/Code.dir/_C++_DG/_01_.cpp.i
+.PHONY : _C++_DG/_01_.cpp.i
+
+_C++_DG/_01_.s: _C++_DG/_01_.cpp.s
+.PHONY : _C++_DG/_01_.s
+
+# target to generate assembly for a file
+_C++_DG/_01_.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Code.dir/build.make CMakeFiles/Code.dir/_C++_DG/_01_.cpp.s
+.PHONY : _C++_DG/_01_.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -165,6 +189,9 @@ help:
 	@echo "... _C++Learn/00_test.o"
 	@echo "... _C++Learn/00_test.i"
 	@echo "... _C++Learn/00_test.s"
+	@echo "... _C++_DG/_01_.o"
+	@echo "... _C++_DG/_01_.i"
+	@echo "... _C++_DG/_01_.s"
 .PHONY : help
 
 

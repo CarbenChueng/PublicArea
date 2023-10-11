@@ -19,7 +19,7 @@ Clion：
 
 Ubantu：
 
-ssh ：ssh carbenchueng@192.186.3.2
+ssh ：ssh carbenchueng@192.168.3.2
 mkdir {1..5}/{a..h}
 mkdir -p 1/2/3/4/5 ：递归创建文件夹
 rm -r -f  文件名

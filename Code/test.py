@@ -1,6 +1,5 @@
 import json,random,time,pyautogui
 import os, torch, numpy, cv2, turtle
-from tensorboardX import SummaryWriter
 from matplotlib import pyplot as plt
 from tqdm import tqdm
 from PIL import Image
@@ -264,3 +263,22 @@ from torch.backends import mps
 # print(center_loss)
 
 
+#权重初始化
+from _PythonProject._01_DigitalRecognition.write_net import *
+net = DigitalNet()
+# print(net.out_layer[0].weight)
+# print(net.out_layer[0].bias)
+print(net.layers[0].weight)
+# print(net.layers[0].bias)
+def _init_weight(model):
+
+    if isinstance(model,Linear):
+        init.normal_(model.weight,0,1)
+        init.zeros_(model.bias)
+    elif isinstance(model,Conv2d):
+        init.kaiming_normal_(model.weight)
+        init.zeros_(model.bias)
+
+net.apply(_init_weight)
+print(net.out_layer[0].weight)
+# print(net.out_layer[0].bias)
