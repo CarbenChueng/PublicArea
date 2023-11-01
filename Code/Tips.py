@@ -15,6 +15,7 @@ Clion：
 11：command w：关闭当前代码页
 12：command up：选择文件
 13：contral  tab：切换代码页
+13：option  up：选中代码区域
 
 
 Ubantu：
