@@ -385,11 +385,6 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Attention_Test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Code" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -605,7 +600,11 @@
       <workItem from="1696645991836" duration="4445000" />
       <workItem from="1696742828108" duration="605000" />
       <workItem from="1696762640835" duration="22261000" />
-      <workItem from="1698808293372" duration="7641000" />
+      <workItem from="1698808293372" duration="8357000" />
+      <workItem from="1701216054798" duration="8000" />
+      <workItem from="1701222271073" duration="4543000" />
+      <workItem from="1701398455060" duration="1000" />
+      <workItem from="1701398697787" duration="1145000" />
     </task>
     <servers />
   </component>
