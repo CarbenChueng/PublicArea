@@ -27,41 +27,25 @@ import matplotlib.pyplot as plt
 
 # =====================================视频，摄像头===========================================
 
-# # cap = cv2.VideoCapture("http://ivi.bupt.edu.cn/hls/cctv1hd.m3u8")#可以读取视频，网络视频（视频格式有要求），数字0不带引号表示摄像头
-# cap = cv2.VideoCapture(1)#可以读取视频，网络视频（视频格式有要求），数字0不带引号表示摄像头
-cap = cv2.VideoCapture("/Users/carbenchueng/Desktop/2-Data/yolov3训练数据-金鱼/20221111_145850.mp4")#0：前置摄像头，1：后置摄像头
+# cap = cv2.VideoCapture("http://ivi.bupt.edu.cn/hls/cctv1hd.m3u8")#可以读取视频，网络视频（视频格式有要求），数字0不带引号表示摄像头
+# cap = cv2.VideoCapture(0)#可以读取视频，网络视频（视频格式有要求），数字0不带引号表示摄像头
+cap = cv2.VideoCapture("D:/2-Data/yolov3训练数据-金鱼/20221111_145850.mp4")#0：前置摄像头，1：后置摄像头
 i=0
 try:
     while cap.isOpened():
-        lt = time.localtime()
-        # print(lt[5])
+
         ret,frame = cap.read()#ret返回bool值，判断是否读取成功，frame就是读取到的每一帧画面
-        if not ret:
-            print("end!!")
-        cv2.namedWindow("frame",cv2.WINDOW_NORMAL)
-        cv2.resizeWindow("frame",1000,565)
-        cv2.moveWindow("frame",2000,100)
-        cv2.imshow("frame",frame)
-        # if lt[5]%2==0:
-        #
-        #     cv2.imwrite(f"/Users/carbenchueng/Desktop/2-Data/yolov3训练数据-金鱼/fish/p{i}.jpg",frame)
-        #     i+=1
 
         key = cv2.waitKey(25)
-        # print(type(key))
-
-        # print(key)
-        # time.sleep(1)
         if key == ord("q"):
             break
-
+        cv2.imshow("frame",frame)
     cap.release()
     cv2.destroyAllWindows()#关闭窗口
+
 except Exception as e:
     print(e)
-    ff = open("Erro.txt","a+")
-    ff.write(str(e))
-    ff.close()
+
 
 # lt = time.localtime()
 # print(lt[5])
@@ -306,6 +290,4 @@ except Exception as e:
 # cv2.imshow("a",img1)
 
 # cv2.waitKey(0)
-
-
 

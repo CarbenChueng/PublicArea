@@ -8,8 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/Users/carbenchueng/Desktop/1-Git/Code/_C++Learn/00_test.cpp" "CMakeFiles/Code.dir/_C++Learn/00_test.cpp.o" "gcc" "CMakeFiles/Code.dir/_C++Learn/00_test.cpp.o.d"
-  "/Users/carbenchueng/Desktop/1-Git/Code/_C++_DG/_01_.cpp" "CMakeFiles/Code.dir/_C++_DG/_01_.cpp.o" "gcc" "CMakeFiles/Code.dir/_C++_DG/_01_.cpp.o.d"
+  "D:/1-Git/Code/_C++Learn/00_test.cpp" "CMakeFiles/Code.dir/_C++Learn/00_test.cpp.obj" "gcc" "CMakeFiles/Code.dir/_C++Learn/00_test.cpp.obj.d"
+  "D:/1-Git/Code/_C++_DG/_01_.cpp" "CMakeFiles/Code.dir/_C++_DG/_01_.cpp.obj" "gcc" "CMakeFiles/Code.dir/_C++_DG/_01_.cpp.obj.d"
   )
 
 # Targets to which this target links.

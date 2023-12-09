@@ -344,6 +344,7 @@
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
+    <option name="sortByType" value="true" />
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
@@ -353,13 +354,13 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
     &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/carbenchueng/Desktop/1-Git/Code/_PythonProject&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/1-Git/Code&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;terminal&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -374,7 +375,7 @@
       <recent name="$PROJECT_DIR$/_PythonProject/_05_MTCNN" />
     </key>
   </component>
-  <component name="RunManager" selected="Python._Deploy">
+  <component name="RunManager" selected="Python.OpencvStudy">
     <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -414,7 +415,6 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="/Applications/anaconda3/python.app/Contents/MacOS/python" />
-      <option name="SDK_NAME" value="Python 3.11" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/_PythonProject/_06_CenterLoss" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -450,7 +450,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="MoilbeNet_V2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="OpencvStudy" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Code" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -458,11 +458,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/_PythonProject/_08_MobileNet_V2" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/_PythonLearn" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/_PythonProject/_08_MobileNet_V2/MoilbeNet_V2.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/_PythonLearn/OpencvStudy.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -537,19 +537,19 @@
     <list>
       <item itemvalue="CMake 应用程序.Code" />
       <item itemvalue="Python.CenterLoss" />
+      <item itemvalue="Python.OpencvStudy" />
       <item itemvalue="Python._Deploy" />
       <item itemvalue="Python.Attention_Test" />
       <item itemvalue="Python._Attention" />
-      <item itemvalue="Python.MoilbeNet_V2" />
       <item itemvalue="Python.test" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.OpencvStudy" />
+        <item itemvalue="Python.test" />
         <item itemvalue="Python._Deploy" />
         <item itemvalue="Python.Attention_Test" />
         <item itemvalue="Python._Attention" />
-        <item itemvalue="Python.MoilbeNet_V2" />
-        <item itemvalue="Python.test" />
       </list>
     </recent_temporary>
   </component>
@@ -605,6 +605,16 @@
       <workItem from="1701222271073" duration="4543000" />
       <workItem from="1701398455060" duration="1000" />
       <workItem from="1701398697787" duration="1145000" />
+      <workItem from="1701406173250" duration="4341000" />
+      <workItem from="1701956525137" duration="1712000" />
+      <workItem from="1702086776735" duration="189000" />
+      <workItem from="1702086974705" duration="247000" />
+      <workItem from="1702087231437" duration="210000" />
+      <workItem from="1702087532741" duration="3314000" />
+      <workItem from="1702092736262" duration="727000" />
+      <workItem from="1702097616713" duration="887000" />
+      <workItem from="1702115079358" duration="74000" />
+      <workItem from="1702121137679" duration="698000" />
     </task>
     <servers />
   </component>

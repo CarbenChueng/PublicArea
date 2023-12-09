@@ -7,7 +7,7 @@ from torch.nn import *
 from thop import profile, clever_format
 from torchvision import datasets, transforms
 from torch.utils.data import DataLoader, Dataset
-from torch.backends import mps
+
 
 # import torch.backends.mps as mps,json
 
@@ -264,21 +264,21 @@ from torch.backends import mps
 
 
 #权重初始化
-from _PythonProject._01_DigitalRecognition.write_net import *
-net = DigitalNet()
+# from _PythonProject._01_DigitalRecognition.write_net import *
+# net = DigitalNet()
+# # print(net.out_layer[0].weight)
+# # print(net.out_layer[0].bias)
+# print(net.layers[0].weight)
+# # print(net.layers[0].bias)
+# def _init_weight(model):
+#
+#     if isinstance(model,Linear):
+#         init.normal_(model.weight,0,1)
+#         init.zeros_(model.bias)
+#     elif isinstance(model,Conv2d):
+#         init.kaiming_normal_(model.weight)
+#         init.zeros_(model.bias)
+#
+# net.apply(_init_weight)
 # print(net.out_layer[0].weight)
-# print(net.out_layer[0].bias)
-print(net.layers[0].weight)
-# print(net.layers[0].bias)
-def _init_weight(model):
-
-    if isinstance(model,Linear):
-        init.normal_(model.weight,0,1)
-        init.zeros_(model.bias)
-    elif isinstance(model,Conv2d):
-        init.kaiming_normal_(model.weight)
-        init.zeros_(model.bias)
-
-net.apply(_init_weight)
-print(net.out_layer[0].weight)
 # print(net.out_layer[0].bias)

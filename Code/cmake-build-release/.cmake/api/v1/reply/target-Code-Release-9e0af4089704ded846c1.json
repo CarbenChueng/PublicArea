@@ -2,7 +2,10 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "Code"
+			"path" : "Code.exe"
+		},
+		{
+			"path" : "Code.pdb"
 		}
 	],
 	"backtrace" : 1,
@@ -54,7 +57,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-O3 -DNDEBUG -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fcolor-diagnostics"
+					"fragment" : "-O3 -DNDEBUG -fdiagnostics-color=always"
 				},
 				{
 					"fragment" : "-std=gnu++14"
@@ -64,15 +67,15 @@
 			[
 				{
 					"backtrace" : 2,
-					"path" : "/Users/carbenchueng/Desktop/1-Git/Code/."
+					"path" : "D:/1-Git/Code/."
 				},
 				{
 					"backtrace" : 3,
-					"path" : "/Users/carbenchueng/Desktop/1-Git/Code/_C++Learn"
+					"path" : "D:/1-Git/Code/_C++Learn"
 				},
 				{
 					"backtrace" : 4,
-					"path" : "/Users/carbenchueng/Desktop/1-Git/Code/_C++Project"
+					"path" : "D:/1-Git/Code/_C++Project"
 				}
 			],
 			"language" : "CXX",
@@ -103,12 +106,16 @@
 			{
 				"fragment" : "",
 				"role" : "flags"
+			},
+			{
+				"fragment" : "-lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32",
+				"role" : "libraries"
 			}
 		],
 		"language" : "CXX"
 	},
 	"name" : "Code",
-	"nameOnDisk" : "Code",
+	"nameOnDisk" : "Code.exe",
 	"paths" : 
 	{
 		"build" : ".",
