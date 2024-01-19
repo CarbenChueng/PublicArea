@@ -30,8 +30,8 @@ void test()
     cout << stk.size();
 }
 
-//int main()
-//{
-//    test();
-//    return 0;
-//}
+int main()
+{
+    test();
+    return 0;
+}

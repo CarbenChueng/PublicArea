@@ -246,12 +246,12 @@ from torch.utils.data import DataLoader, Dataset
 
 #center loss
 data = torch.Tensor([[3,4],[5,6],[7,8],[9,8],[6,5]])
-# print(data.shape)
-label = torch.Tensor([1,0,0,1,0])
-center = torch.Tensor([[3,3],[7,7]])
-
-center_exp = center.index_select(dim=0,index = label.long())
-print(center_exp)
+print(data.shape)
+# label = torch.Tensor([1,0,0,1,0])
+# center = torch.Tensor([[3,3],[7,7]])
+#
+# center_exp = center.index_select(dim=0,index = label.long())
+# print(center_exp)
 #
 # count = torch.histc(label,bins=2,min=0,max=1)
 # print(count)
@@ -283,4 +283,5 @@ print(center_exp)
 # print(net.out_layer[0].weight)
 # print(net.out_layer[0].bias)
 
-print((((("asd得到")))))
+# print(((("666"))))
+print(torch.cuda.is_available())

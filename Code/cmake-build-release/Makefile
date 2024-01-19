@@ -115,6 +115,43 @@ depend:
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
 .PHONY : depend
 
+#=============================================================================
+# Target rules for targets named new_target
+
+# Build rule for target.
+new_target: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 new_target
+.PHONY : new_target
+
+# fast build rule for target.
+new_target/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\new_target.dir\build.make CMakeFiles/new_target.dir/build
+.PHONY : new_target/fast
+
+_C++Learn/02_Operator.obj: _C++Learn/02_Operator.cpp.obj
+.PHONY : _C++Learn/02_Operator.obj
+
+# target to build an object file
+_C++Learn/02_Operator.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\new_target.dir\build.make CMakeFiles/new_target.dir/_C++Learn/02_Operator.cpp.obj
+.PHONY : _C++Learn/02_Operator.cpp.obj
+
+_C++Learn/02_Operator.i: _C++Learn/02_Operator.cpp.i
+.PHONY : _C++Learn/02_Operator.i
+
+# target to preprocess a source file
+_C++Learn/02_Operator.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\new_target.dir\build.make CMakeFiles/new_target.dir/_C++Learn/02_Operator.cpp.i
+.PHONY : _C++Learn/02_Operator.cpp.i
+
+_C++Learn/02_Operator.s: _C++Learn/02_Operator.cpp.s
+.PHONY : _C++Learn/02_Operator.s
+
+# target to generate assembly for a file
+_C++Learn/02_Operator.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\new_target.dir\build.make CMakeFiles/new_target.dir/_C++Learn/02_Operator.cpp.s
+.PHONY : _C++Learn/02_Operator.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -123,6 +160,10 @@ help:
 	@echo ... depend
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... new_target
+	@echo ... _C++Learn/02_Operator.obj
+	@echo ... _C++Learn/02_Operator.i
+	@echo ... _C++Learn/02_Operator.s
 .PHONY : help
 
 
