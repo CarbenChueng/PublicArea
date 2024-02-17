@@ -16,6 +16,7 @@ Clion：
 12：command up：选择文件
 13：contral  tab：切换代码页
 13：option  up：选中代码区域
+14：
 
 
 Ubantu：
@@ -69,4 +70,14 @@ uptime：查看开机了多久
 caffeinate :保持唤醒状态
 mkdir {"1".."5"}/{"a".."h"}
 mkdir -p 1/2/3/4/5 ：递归创建文件夹
+
+
+windows:
+
+win D   显示桌面
+win v   显示粘贴板
+win l   锁屏
+win 数字键   显示/启动任务栏对应排序的软件
+
+
 """

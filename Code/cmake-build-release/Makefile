@@ -128,6 +128,30 @@ new_target/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\new_target.dir\build.make CMakeFiles/new_target.dir/build
 .PHONY : new_target/fast
 
+_C++Learn/00_test.obj: _C++Learn/00_test.cpp.obj
+.PHONY : _C++Learn/00_test.obj
+
+# target to build an object file
+_C++Learn/00_test.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\new_target.dir\build.make CMakeFiles/new_target.dir/_C++Learn/00_test.cpp.obj
+.PHONY : _C++Learn/00_test.cpp.obj
+
+_C++Learn/00_test.i: _C++Learn/00_test.cpp.i
+.PHONY : _C++Learn/00_test.i
+
+# target to preprocess a source file
+_C++Learn/00_test.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\new_target.dir\build.make CMakeFiles/new_target.dir/_C++Learn/00_test.cpp.i
+.PHONY : _C++Learn/00_test.cpp.i
+
+_C++Learn/00_test.s: _C++Learn/00_test.cpp.s
+.PHONY : _C++Learn/00_test.s
+
+# target to generate assembly for a file
+_C++Learn/00_test.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\new_target.dir\build.make CMakeFiles/new_target.dir/_C++Learn/00_test.cpp.s
+.PHONY : _C++Learn/00_test.cpp.s
+
 _C++Learn/02_Operator.obj: _C++Learn/02_Operator.cpp.obj
 .PHONY : _C++Learn/02_Operator.obj
 
@@ -161,6 +185,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... new_target
+	@echo ... _C++Learn/00_test.obj
+	@echo ... _C++Learn/00_test.i
+	@echo ... _C++Learn/00_test.s
 	@echo ... _C++Learn/02_Operator.obj
 	@echo ... _C++Learn/02_Operator.i
 	@echo ... _C++Learn/02_Operator.s

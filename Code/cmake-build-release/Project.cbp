@@ -82,6 +82,9 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="D:/1-Git/Code/_C++Learn/00_test.cpp">
+			<Option target="new_target"/>
+		</Unit>
 		<Unit filename="D:/1-Git/Code/_C++Learn/02_Operator.cpp">
 			<Option target="new_target"/>
 		</Unit>

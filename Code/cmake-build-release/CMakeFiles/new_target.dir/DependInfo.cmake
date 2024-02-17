@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "D:/1-Git/Code/_C++Learn/00_test.cpp" "CMakeFiles/new_target.dir/_C++Learn/00_test.cpp.obj" "gcc" "CMakeFiles/new_target.dir/_C++Learn/00_test.cpp.obj.d"
   "D:/1-Git/Code/_C++Learn/02_Operator.cpp" "CMakeFiles/new_target.dir/_C++Learn/02_Operator.cpp.obj" "gcc" "CMakeFiles/new_target.dir/_C++Learn/02_Operator.cpp.obj.d"
   )
 

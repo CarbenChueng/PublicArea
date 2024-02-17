@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/new_target.dir/_C++Learn/00_test.cpp.obj"
+  "CMakeFiles/new_target.dir/_C++Learn/00_test.cpp.obj.d"
   "CMakeFiles/new_target.dir/_C++Learn/02_Operator.cpp.obj"
   "CMakeFiles/new_target.dir/_C++Learn/02_Operator.cpp.obj.d"
   "libnew_target.dll.a"
