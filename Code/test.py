@@ -1,4 +1,4 @@
-import json,random,time
+import json,random,time,torchvision
 import os, torch, numpy, cv2, turtle
 from matplotlib import pyplot as plt
 from tqdm import tqdm
@@ -6,6 +6,7 @@ from PIL import Image
 from torch.nn import *
 from thop import profile, clever_format
 from torchvision import datasets, transforms
+from torchvision.models import ResNet18_Weights
 from torch.utils.data import DataLoader, Dataset
 
 
@@ -285,3 +286,14 @@ from torch.utils.data import DataLoader, Dataset
 
 # print(((("666"))))
 # print(torch.cuda.is_available())
+
+model = torchvision.models.resnet18(weights = ResNet18_Weights.IMAGENET1K_V1)
+x = torch.randn(1,3,224,224)
+torch.onnx.export(model,x,"resnet18.onnx",export_params=True)
+#用sin简化onnx：python -m onnxsim resnet18.onnx resnet18_sim.onnx
+
+
+
+
+
+
